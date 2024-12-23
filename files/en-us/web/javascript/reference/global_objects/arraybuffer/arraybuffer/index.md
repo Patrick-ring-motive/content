@@ -66,7 +66,7 @@ buffer.resize(12);
 
 ### String To ArrayBuffer
 
-Here is a simple way to synchronously convert a String to an ArrayBuffer.
+Here is a simple way to synchronously convert a `String` to an `ArrayBuffer`.
 
 ```js
 const str = "Hello World!";
@@ -82,7 +82,7 @@ const stringToBuffer = str => new TextEncoder().encode(str).buffer;
 
 ### ArrayBuffer To String
 
-Here is the reverse operation to convert an ArrayBuffer String.
+Here is the reverse operation to convert an `ArrayBuffer` to a `String`.
 
 ```js
 const buffer = new ArrayBuffer(8)
@@ -97,7 +97,7 @@ const bufferToString = buffer => new TextDecoder().decode(new Uint8Array(buffer)
 ```
 
 > [!NOTE]
-> Both `TextEncoder` and `TextDecoder` use UTF-8 encoding by default. This ensures that characters from most languages and emoji are encoded and decoded correctly.
+> Both {{jsxref("TextEncoder")}} and {{jsxref("TextDecoder")}} use UTF-8 encoding by default. This ensures that characters from most languages and emoji are encoded and decoded correctly.
 
 ## Specifications
 
