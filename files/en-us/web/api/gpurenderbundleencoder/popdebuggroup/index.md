@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderBundleEncoder.popDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`popDebugGroup()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface ends a render bundle debug group, which is begun with a {{domxref("GPURenderBundleEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
@@ -45,7 +45,7 @@ The following criteria must be met when calling **`popDebugGroup()`**, otherwise
 
 const bundleEncoder = device.createRenderBundleEncoder(renderBundleDescriptor);
 
-bundleEncoder.pushDebugGroup("mygroupmarker"); // Start labeled debug group
+bundleEncoder.pushDebugGroup("my_group_marker"); // Start labeled debug group
 
 bundleEncoder.setPipeline(renderPipeline);
 bundleEncoder.setVertexBuffer(0, vertexBuffer);

@@ -8,7 +8,7 @@ page-type: guide
 
 A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. Creating a custom server can seem overwhelming if you have never done it before. It can actually be quite straightforward to implement a basic WebSocket server on your platform of choice, though.
 
-A WebSocket server can be written in any server-side programming language that is capable of [Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), such as C(++), Python, {{Glossary("PHP")}}, or [server-side JavaScript](/en-US/docs/Learn/Server-side/Node_server_without_framework). This is not a tutorial in any specific language, but serves as a guide to facilitate writing your own server.
+A WebSocket server can be written in any server-side programming language that is capable of [Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), such as C(++), Python, {{Glossary("PHP")}}, or [server-side JavaScript](/en-US/docs/Learn_web_development/Extensions/Server-side/Node_server_without_framework). This is not a tutorial in any specific language, but serves as a guide to facilitate writing your own server.
 
 This article assumes you're already familiar with how {{Glossary("HTTP")}} works, and that you have a moderate level of programming experience. Depending on language support, knowledge of TCP sockets may be required. The scope of this guide is to present the minimum knowledge you need to write a WebSocket server.
 
@@ -64,12 +64,12 @@ Connection: Upgrade
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ```
 
-Additionally, the server can decide on extension/subprotocol requests here; see [Miscellaneous](#miscellaneous) for details. The `Sec-WebSocket-Accept` header is important in that the server must derive it from the {{HTTPHeader("Sec-WebSocket-Key")}} that the client sent to it. To get it, concatenate the client's `Sec-WebSocket-Key` and the string "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" together (it's a "[magic string](https://en.wikipedia.org/wiki/Magic_string)"), take the [SHA-1 hash](https://en.wikipedia.org/wiki/SHA-1) of the result, and return the [base64](https://en.wikipedia.org/wiki/Base64) encoding of that hash.
+Additionally, the server can decide on extension/subprotocol requests here; see [Miscellaneous](#miscellaneous) for details. The `Sec-WebSocket-Accept` header is important in that the server must derive it from the {{HTTPHeader("Sec-WebSocket-Key")}} that the client sent to it. To get it, concatenate the client's `Sec-WebSocket-Key` and the string `"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"` together (it's a "[magic string](https://en.wikipedia.org/wiki/Magic_string)"), take the [SHA-1 hash](https://en.wikipedia.org/wiki/SHA-1) of the result, and return the [base64](https://en.wikipedia.org/wiki/Base64) encoding of that hash.
 
 > [!NOTE]
 > This seemingly overcomplicated process exists so that it's obvious to the client whether the server supports WebSockets. This is important because security issues might arise if the server accepts a WebSockets connection but interprets the data as a HTTP request.
 
-So if the Key was "`dGhlIHNhbXBsZSBub25jZQ==`", the `Sec-WebSocket-Accept` header's value is "`s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`". Once the server sends these headers, the handshake is complete and you can start swapping data!
+So if the Key was `"dGhlIHNhbXBsZSBub25jZQ=="`, the `Sec-WebSocket-Accept` header's value is `"s3pPLMBiTxaQ9kYGzzhZRbK+xOo="`. Once the server sends these headers, the handshake is complete and you can start swapping data!
 
 > [!NOTE]
 > The server can send other headers like {{HTTPHeader("Set-Cookie")}}, or ask for authentication or redirects via other status codes, before sending the reply handshake.
@@ -155,7 +155,7 @@ Now you can figure out what **DECODED** means depending on your application.
 
 The FIN and opcode fields work together to send a message split up into separate frames. This is called message fragmentation. Fragmentation is only available on opcodes `0x0` to `0x2`.
 
-Recall that the opcode tells what a frame is meant to do. If it's `0x1`, the payload is text. If it's `0x2`, the payload is binary data. However, if it's `0x0,` the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client. Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:
+Recall that the opcode tells what a frame is meant to do. If it's `0x1`, the payload is text. If it's `0x2`, the payload is binary data. However, if it's `0x0`, the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client. Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:
 
 ```plain
 Client: FIN=1, opcode=0x1, msg="hello"
@@ -222,12 +222,12 @@ Sec-WebSocket-Protocol: wamp
 
 Now the server must pick one of the protocols that the client suggested and it supports. If there is more than one, send the first one the client sent. Imagine our server can use both `soap` and `wamp`. Then, in the response handshake, it sends:
 
-```bash
+```http
 Sec-WebSocket-Protocol: soap
 ```
 
 > [!WARNING]
-> The server can't send more than one `Sec-Websocket-Protocol` header.
+> The server can't send more than one `Sec-WebSocket-Protocol` header.
 > If the server doesn't want to use any subprotocol, **_it shouldn't send any `Sec-WebSocket-Protocol` header_**. Sending a blank header is incorrect. The client may close the connection if it doesn't get the subprotocol it wants.
 
 If you want your server to obey certain subprotocols, then naturally you'll need extra code on the server. Let's imagine we're using a subprotocol `json`. In this subprotocol, all data is passed as [JSON](https://en.wikipedia.org/wiki/JSON). If the client solicits this protocol and the server wants to use it, the server needs to have a JSON parser. Practically speaking, this will be part of a library, but the server needs to pass the data around.
@@ -238,5 +238,5 @@ If you want your server to obey certain subprotocols, then naturally you'll need
 ## Related
 
 - [Writing WebSocket client applications](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-- [Tutorial: Websocket server in C#](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
-- [Tutorial: Websocket server in Java](/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java)
+- [Tutorial: WebSocket server in C#](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
+- [Tutorial: WebSocket server in Java](/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java)

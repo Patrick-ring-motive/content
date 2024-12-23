@@ -96,7 +96,7 @@ The HTML specification defines the following set of standard metadata names:
   > - When several conflicting policies are defined, the `no-referrer` policy is applied.
 
 - [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color): indicates a suggested color that user agents should use to customize the display of the page or of the surrounding user interface. The `content` attribute contains a valid CSS {{cssxref("&lt;color&gt;")}}. The `media` attribute with a valid media query list can be included to set the media the theme color metadata applies to.
-- `color-scheme`: specifies one or more color schemes with which the document is compatible.
+- <a id="color-scheme" href="#color-scheme">`color-scheme`</a>: specifies one or more color schemes with which the document is compatible.
 
   The browser will use this information in tandem with the user's browser or device settings to determine what colors to use for everything from background and foregrounds to form controls and scrollbars. The primary use for `<meta name="color-scheme">` is to indicate compatibility with—and order of preference for—light and dark color modes.
 
@@ -241,10 +241,10 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
   >
   > - Only cooperative robots follow these rules. Do not expect to prevent email harvesters with them.
   > - The robot still needs to access the page in order to read these rules. To prevent bandwidth consumption, consider if using a _{{Glossary("robots.txt")}}_ file is more appropriate.
-  > - The `robots` `<meta>` tag and `robots.txt` file serve different purposes: `robots.txt` controls the crawling of pages, and does not affect indexing or other behavior controlled by `robots` meta. A page that can't be crawled may still be indexed if it is referenced by another document.
+  > - The `<meta name="robots">` element and `robots.txt` file serve different purposes: `robots.txt` controls the crawling of pages, and does not affect indexing or other behavior controlled by `robots` meta. A page that can't be crawled may still be indexed if it is referenced by another document.
   > - If you want to remove a page, `noindex` will work, but only after the robot visits the page again. Ensure that the `robots.txt` file is not preventing revisits.
   > - Some values are mutually exclusive, like `index` and `noindex`, or `follow` and `nofollow`. In these cases the robot's behavior is undefined and may vary between them.
-  > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header `X-Robots-Tag`; this allows non-HTML documents like images to use these rules.
+  > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header {{HTTPHeader("X-Robots-Tag")}}; this allows non-HTML documents like images to use these rules.
 
 <!-- ## Technical summary -->
 
@@ -259,4 +259,4 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 ## See also
 
 - [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag)
-- [Metadata: the `<meta>` element](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element) in [What's in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [Metadata: the `<meta>` element](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)

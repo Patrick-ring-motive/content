@@ -157,14 +157,14 @@ Various components can be omitted, so the following are all valid:
 
 For example, `"2011-10-10"` (_date-only_ form), `"2011-10-10T14:48:00"` (_date-time_ form), or `"2011-10-10T14:48:00.000+09:00"` (_date-time_ form with milliseconds and time zone) are all valid date time strings.
 
-When the time zone offset is absent, **date-only forms are interpreted as a UTC time and date-time forms are interpreted as local time.** This is due to a historical spec error that was not consistent with ISO 8601 but could not be changed due to web compatibility. See [Broken Parser – A Web Reality Issue](https://maggiepint.com/2017/04/11/fixing-javascript-date-web-compatibility-and-reality/).
+When the time zone offset is absent, **date-only forms are interpreted as a UTC time and date-time forms are interpreted as a local time.** The interpretation as a UTC time is due to a historical spec error that was not consistent with ISO 8601 but could not be changed due to web compatibility. See [Broken Parser – A Web Reality Issue](https://maggiepint.com/2017/04/11/fixing-javascript-date-web-compatibility-and-reality/).
 
 {{jsxref("Date.parse()")}} and the {{jsxref("Date/Date", "Date()")}} constructor both accept strings in the date time string format as input. Furthermore, implementations are allowed to support other date formats when the input fails to match this format.
 
 The {{jsxref("Date/toISOString", "toISOString()")}} method returns a string representation of the date in the date time string format, with the time zone offset always set to `Z` (UTC).
 
 > [!NOTE]
-> You are encouraged to make sure your input conforms to the date time string format above for maximum compatibility, because support for other formats is not guaranteed. However, there are some formats that are supported in all major implementations — like {{rfc(2822)}} format — in which case their usage can be acceptable. Always conduct [cross-browser tests](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) to ensure your code works in all target browsers. A library can help if many different formats are to be accommodated.
+> You are encouraged to make sure your input conforms to the date time string format above for maximum compatibility, because support for other formats is not guaranteed. However, there are some formats that are supported in all major implementations — like {{rfc(2822)}} format — in which case their usage can be acceptable. Always conduct [cross-browser tests](/en-US/docs/Learn_web_development/Extensions/Testing) to ensure your code works in all target browsers. A library can help if many different formats are to be accommodated.
 
 Non-standard strings can be parsed in any way as desired by the implementation, including the time zone — most implementations use the local time zone by default. Implementations are not required to return invalid date for out-of-bounds date components, although they usually do. A string may have in-bounds date components (with the bounds defined above), but does not represent a date in reality (for example, "February 30"). Implementations behave inconsistently in this case. The [`Date.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#examples) page offers more examples about these non-standard cases.
 

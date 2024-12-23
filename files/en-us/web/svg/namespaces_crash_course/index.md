@@ -166,7 +166,7 @@ The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) recommendation was cre
       <td>
         <a href="/en-US/docs/Web/API/Document/getElementsByTagNameNS"><code>getElementsByTagNameNS()</code></a
         >
-        (also<a href="/en-US/docs/Web/API/Element/getElementsByTagNameNS">added to Element</a>)
+        (also <a href="/en-US/docs/Web/API/Element/getElementsByTagNameNS">added to Element</a>)
       </td>
     </tr>
     <tr>
@@ -284,7 +284,7 @@ For setting parameters that have a namespace, it is recommended (but not require
 elt.setAttributeNS(
   "http://www.w3.org/1999/xlink",
   "xlink:href",
-  "otherdoc.svg",
+  "other-doc.svg",
 );
 ```
 

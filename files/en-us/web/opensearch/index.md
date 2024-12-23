@@ -47,7 +47,7 @@ The XML file that describes a search engine follows the basic template below. Se
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>
       <!-- or -->
-    <Image height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAA … DAAA=</Image>
+    <Image height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAA…DAAA=</Image>
     ```
 
     Firefox caches the icon as a [base64](https://en.wikipedia.org/wiki/Base64) `data:` URL (search plug-ins are stored in the [profile](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data)'s `searchplugins/` folder). `http:` and `https:` URLs are converted to `data:` URLs when this is done.
@@ -81,11 +81,11 @@ To support autodiscovery, add a `<link>` element for each plugin to the `<head>`
 <link
   rel="search"
   type="application/opensearchdescription+xml"
-  title="searchTitle"
-  href="pluginURL" />
+  title="[searchTitle]"
+  href="[pluginURL]" />
 ```
 
-Replace the bolded items as explained below:
+Replace the items in _\[square brackets\]_ as explained below:
 
 - searchTitle
   - : The name of the search to perform, such as "Search MDC" or "Yahoo! Search". This must match your plugin file's `<ShortName>`.
@@ -138,7 +138,7 @@ If there is a mistake in your Search Plugin XML, you could run into errors when 
 - You **must** include a `text/html` URL — search plugins including only Atom or [RSS](/en-US/docs/Glossary/RSS) URL types (which is valid, but Firefox doesn't support) will also generate the "could not download the search plugin" error.
 - Remotely fetched favicons must not be larger than 10KB (see [Firefox bug 361923](https://bugzil.la/361923)).
 
-In addition, the search plugin service provides a logging mechanism that may be useful to plugin developers. Use `about:config` to set the pref '`browser.search.log`' to `true`. Then, logging information will appear in Firefox's [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html)(Tools ➤ Browser Tools ➤ Browser Console) when search plugins are added.
+In addition, the search plugin service provides a logging mechanism that may be useful to plugin developers. Use `about:config` to set the pref `browser.search.log` to `true`. Then, logging information will appear in Firefox's [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) (Tools ➤ Browser Tools ➤ Browser Console) when search plugins are added.
 
 ## Reference Material
 

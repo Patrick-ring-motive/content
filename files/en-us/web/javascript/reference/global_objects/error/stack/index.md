@@ -113,7 +113,7 @@ Error: eval failed
     at filename.js:3:13
 ```
 
-In Firefox, you can use the `//# sourceURL` directive to name an eval source. See the Firefox [Debug eval sources](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) docs and the [Naming `eval` Scripts with the `//# sourceURL` Directive](https://fitzgeraldnick.com/2014/12/05/name-eval-scripts.html) blog post for more details.
+In Firefox, you can use the `//# sourceURL` directive to name an eval source. See the Firefox [Debug eval sources](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) docs and the [Naming `eval` Scripts with the `//# sourceURL` Directive](https://fitzgen.com/2014/12/05/name-eval-scripts.html) blog post for more details.
 
 ## Examples
 
@@ -143,7 +143,7 @@ function a() {
   b(3, 4, "\n\n", undefined, {});
 }
 try {
-  a("first call, firstarg");
+  a("first call, first arg");
 } catch (e) {
   document.getElementById("output").textContent = e.stack;
 }

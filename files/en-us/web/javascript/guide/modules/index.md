@@ -2,9 +2,6 @@
 title: JavaScript modules
 slug: Web/JavaScript/Guide/Modules
 page-type: guide
-browser-compat:
-  - javascript.statements.import
-  - javascript.statements.export
 ---
 
 {{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
@@ -15,19 +12,13 @@ This guide gives you all you need to get started with JavaScript module syntax.
 
 JavaScript programs started off pretty small — most of its usage in the early days was to do isolated scripting tasks, providing a bit of interactivity to your web pages where needed, so large scripts were generally not needed. Fast forward a few years and we now have complete applications being run in browsers with a lot of JavaScript, as well as JavaScript being used in other contexts ([Node.js](/en-US/docs/Glossary/Node.js), for example).
 
-It has therefore made sense in recent years to start thinking about providing mechanisms for splitting JavaScript programs up into separate modules that can be imported when needed. Node.js has had this ability for a long time, and there are a number of JavaScript libraries and frameworks that enable module usage (for example, other [CommonJS](https://en.wikipedia.org/wiki/CommonJS) and [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)-based module systems like [RequireJS](https://requirejs.org/), and more recently [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/)).
+Complex projects necessitate a mechanism for splitting JavaScript programs into separate modules that can be imported when needed. Node.js has had this ability for a long time, and there are a number of JavaScript libraries and frameworks that enable module usage (for example, other [CommonJS](https://en.wikipedia.org/wiki/CommonJS) and [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)-based module systems like [RequireJS](https://requirejs.org/), [webpack](https://webpack.js.org/), and [Babel](https://babeljs.io/)).
 
-The good news is that modern browsers have started to support module functionality natively, and this is what this article is all about. This can only be a good thing — browsers can optimize loading of modules, making it more efficient than having to use a library and do all of that extra client-side processing and extra round trips.
-
-Use of native JavaScript modules is dependent on the {{jsxref("Statements/import", "import")}} and {{jsxref("Statements/export", "export")}} statements; these are supported in browsers as shown in the compatibility table below.
-
-## Browser compatibility
-
-{{Compat}}
+All modern browsers support module features natively without needing transpilation. It can only be a good thing — browsers can optimize loading of modules, making it more efficient than having to use a library and do all of that extra client-side processing and extra round trips. It does not obsolete bundlers like webpack, though — bundlers still do a good job at partitioning code into reasonably sized chunks, and are able to do other optimizations like minification, dead code elimination, and tree-shaking.
 
 ## Introducing an example
 
-To demonstrate usage of modules, we've created a [simple set of examples](https://github.com/mdn/js-examples/tree/main/module-examples) that you can find on GitHub. These examples demonstrate a simple set of modules that create a [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) element on a webpage, and then draw (and report information about) different shapes on the canvas.
+To demonstrate usage of modules, we've created a [set of examples](https://github.com/mdn/js-examples/tree/main/module-examples) that you can find on GitHub. These examples demonstrate a set of modules that create a [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) element on a webpage, and then draw (and report information about) different shapes on the canvas.
 
 These are fairly trivial, but have been kept deliberately simple to demonstrate modules clearly.
 
@@ -321,18 +312,18 @@ The example below demonstrates this.
 ```json
 {
   "imports": {
-    "coolmodule": "/node_modules/coolmodule/index.js"
+    "cool-module": "/node_modules/cool-module/index.js"
   },
   "scopes": {
     "/node_modules/dependency/": {
-      "coolmodule": "/node_modules/some/other/location/coolmodule/index.js"
+      "cool-module": "/node_modules/some/other/location/cool-module/index.js"
     }
   }
 }
 ```
 
-With this mapping, if a script with an URL that contains `/node_modules/dependency/` imports `coolmodule`, the version in `/node_modules/some/other/location/coolmodule/index.js` will be used.
-The map in `imports` is used as a fallback if there is no matching scope in the scoped map, or the matching scopes don't contain a matching specifier. For example, if `coolmodule` is imported from a script with a non-matching scope path, then the module specifier map in `imports` will be used instead, mapping to the version in `/node_modules/coolmodule/index.js`.
+With this mapping, if a script with an URL that contains `/node_modules/dependency/` imports `cool-module`, the version in `/node_modules/some/other/location/cool-module/index.js` will be used.
+The map in `imports` is used as a fallback if there is no matching scope in the scoped map, or the matching scopes don't contain a matching specifier. For example, if `cool-module` is imported from a script with a non-matching scope path, then the module specifier map in `imports` will be used instead, mapping to the version in `/node_modules/cool-module/index.js`.
 
 Note that the path used to select a scope does not affect how the address is resolved.
 The value in the mapped path does not have to match the scopes path, and relative paths are still resolved to the base URL of the script that contains the import map.
@@ -414,13 +405,13 @@ You can only use `import` and `export` statements inside modules, not regular sc
 You should generally define all your modules in separate files. Modules declared inline in HTML can only import other modules, but anything they export will not be accessible by other modules (because they don't have a URL).
 
 > [!NOTE]
-> Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Element/link) elements with [`rel="modulepreloaded"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
+> Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Element/link) elements with [`rel="modulepreload"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
 > This can significantly reduce load time when the modules are used.
 
-## Other differences between modules and standard scripts
+## Other differences between modules and classic scripts
 
 - You need to pay attention to local testing — if you try to load the HTML file locally (i.e. with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.
-- Also, note that you might get different behavior from sections of script defined inside modules as opposed to in standard scripts. This is because modules use {{jsxref("Strict_mode", "strict mode", "", 1)}} automatically.
+- Also, note that you might get different behavior from sections of script defined inside modules as opposed to in classic scripts. This is because modules use {{jsxref("Strict_mode", "strict mode", "", 1)}} automatically.
 - There is no need to use the `defer` attribute (see [`<script>` attributes](/en-US/docs/Web/HTML/Element/script#attributes)) when loading a module script; modules are deferred automatically.
 - Modules are only executed once, even if they have been referenced in multiple `<script>` tags.
 - Last but not least, let's make this clear — module features are imported into the scope of a single script — they aren't available in the global scope. Therefore, you will only be able to access imported features in the script they are imported into, and you won't be able to access them from the JavaScript console, for example. You'll still get syntax errors shown in the DevTools, but you'll not be able to use some of the debugging techniques you might have expected to use.
@@ -789,7 +780,7 @@ Another advantage of dynamic imports is that they are always available, even in 
 
 ## Top level await
 
-Top level await is a feature available within modules. This means the `await` keyword can be used. It allows modules to act as big [asynchronous functions](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing) meaning code can be evaluated before use in parent modules, but without blocking sibling modules from loading.
+Top level await is a feature available within modules. This means the `await` keyword can be used. It allows modules to act as big [asynchronous functions](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing) meaning code can be evaluated before use in parent modules, but without blocking sibling modules from loading.
 
 Let's take a look at an example. You can find all the files and code described in this section within the [`top-level-await`](https://github.com/mdn/js-examples/tree/main/module-examples/top-level-await) directory, which extends from the previous examples.
 

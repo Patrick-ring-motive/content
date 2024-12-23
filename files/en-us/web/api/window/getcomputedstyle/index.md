@@ -149,7 +149,7 @@ Java.
   {{cssxref("font-size")}} as well as shorthand names like {{cssxref("font")}}.
 - CSS property values may be accessed using the
   {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue(propName)")}} method or by indexing directly into the object
-  using array or [dot notation](/en-US/docs/Learn/JavaScript/Objects/Basics#dot_notation) such as `obj['z-index']` or `obj.zIndex`.
+  using array or [dot notation](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#dot_notation) such as `obj['z-index']` or `obj.zIndex`.
 - The values returned by `getComputedStyle` are [resolved values](/en-US/docs/Web/CSS/resolved_value).
   These are usually the same as CSS 2.1's
   [computed values](/en-US/docs/Web/CSS/computed_value), but for some older properties
@@ -174,6 +174,7 @@ Java.
   `bottom:0` on an element with `height:30px` and a containing
   block of `height:100px`, Firefox's computed style for `top`
   returns `70px`, as 100 − 30 = 70.
+- For compatibility reasons, serialized color values are expressed as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) colors if the alpha channel value is exactly `1`, and `rgba()` colors otherwise. In both cases, legacy syntax is used, with commas as separators (for example `rgb(255, 0, 0)`).
 
 ## Specifications
 

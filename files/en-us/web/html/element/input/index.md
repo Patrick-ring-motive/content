@@ -1,5 +1,5 @@
 ---
-title: "<input>: The Input (Form Input) element"
+title: "<input>: The HTML Input element"
 slug: Web/HTML/Element/input
 page-type: html-element
 browser-compat: html.elements.input
@@ -534,9 +534,12 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
 
-  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute defines a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as {{Glossary("ASCII")}}. No forward slashes should be specified around the pattern text.
+  - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, the `pattern` attribute is used to compile a regular expression that the input's [`value`](#value) must match in order for the value to pass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions). No forward slashes should be specified around the pattern text. When compiling the regular expression:
 
-    If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission.
+    1. the pattern will be implicitly wrapped with `^(?:` and `)$`, such that the match is required against the _entire_ input value, i.e., `^(?:<pattern>)$`.
+    2. the `'v'` flag is specified so that the pattern is treated as a sequence of Unicode code points, instead of as {{Glossary("ASCII")}}.
+
+    If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission. If the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) is present, the compiled regular expression is matched against each comma separated value.
 
     > [!NOTE]
     > If using the `pattern` attribute, inform the user about the expected format by including explanatory text nearby. You can also include a [`title`](#title) attribute to explain what the requirements are to match the pattern; most browsers will display this title as a tooltip. The visible explanation is required for accessibility. The tooltip is an enhancement.
@@ -579,7 +582,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - [`size`](/en-US/docs/Web/HTML/Attributes/size)
 
-  - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialities. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
+  - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialties. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
 
 - `src`
 
@@ -640,16 +643,9 @@ The following non-standard attributes are also available on some browsers. As a 
   </thead>
   <tbody>
     <tr>
-      <td><a href="#autocorrect"><code>autocorrect</code></a></td>
-      <td>
-        A string indicating whether autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
-      </td>
-    </tr>
-    <tr>
       <td><a href="#incremental"><code>incremental</code></a></td>
       <td>
-        Whether or not to send repeated {{domxref("HTMLInputElement/search_event", "search")}}
-        events to allow updating live search results while the user is still editing the value of the field.
+        Whether or not to send repeated {{domxref("HTMLInputElement/search_event", "search")}} events to allow updating live search results while the user is still editing the value of the field.
         <strong>WebKit and Blink only (Safari, Chrome, Opera, etc.).</strong>
       </td>
     </tr>
@@ -684,15 +680,6 @@ The following non-standard attributes are also available on some browsers. As a 
     </tr>
   </tbody>
 </table>
-
-- `autocorrect` {{non-standard_inline}}
-
-  - : (Safari only). A string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
-
-    - `on`
-      - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-    - `off`
-      - : Disable automatic correction and text substitutions.
 
 - `incremental` {{non-standard_inline}}
 
@@ -907,7 +894,7 @@ input:checked + label {
 
 ### Attribute selectors
 
-It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of an attribute or the value of a given attribute.
+It is possible to target different types of form controls based on their [`type`](#type) using [attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors). CSS attribute selectors match elements based on either just the presence of an attribute or the value of a given attribute.
 
 ```css
 /* matches a password input */
@@ -988,9 +975,8 @@ For more information about adding color to elements in HTML, see:
 
 Also see:
 
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling) and
-- the [compatibility table of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls).
+- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) and
 
 ## Additional features
 
@@ -1167,7 +1153,7 @@ The last line, setting the custom validity message to the empty string is vital.
 
 #### Custom validation error example
 
-If you want to present a custom error message when a field fails to validate, you need to use the [Constraint Validation API](/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript) available on `<input>` (and related) elements. Take the following form:
+If you want to present a custom error message when a field fails to validate, you need to use the [Constraint Validation API](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#validating_forms_using_javascript) available on `<input>` (and related) elements. Take the following form:
 
 ```html
 <form>
@@ -1440,14 +1426,13 @@ Interactive elements such as form input should provide an area large enough that
 ## See also
 
 - [Form constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [The native form widgets](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [CSS property compatibility table](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Your first HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [How to structure an HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+- [The native form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [How to build custom form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [HTML forms in legacy browsers](/en-US/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
 - [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

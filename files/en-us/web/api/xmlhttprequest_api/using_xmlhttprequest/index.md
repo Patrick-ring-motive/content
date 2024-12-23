@@ -74,7 +74,7 @@ req.overrideMimeType("text/plain; charset=x-user-defined");
 
 However, more modern techniques are available, since the {{domxref("XMLHttpRequest.responseType", "responseType")}} attribute now supports a number of additional content types, which makes sending and receiving binary data much easier.
 
-For example, consider this snippet, which uses the `responseType` of "`arraybuffer`" to fetch the remote content into a {{jsxref("ArrayBuffer")}} object, which stores the raw binary data.
+For example, consider this snippet, which uses the `responseType` of `"arraybuffer"` to fetch the remote content into a {{jsxref("ArrayBuffer")}} object, which stores the raw binary data.
 
 ```js
 const req = new XMLHttpRequest();
@@ -187,7 +187,7 @@ function getHeaderTime() {
 const req = new XMLHttpRequest();
 req.open(
   "HEAD", // use HEAD when you only need the headers
-  "yourpage.html",
+  "your-page.html",
 );
 req.onload = getHeaderTime;
 req.send();
@@ -223,8 +223,8 @@ function ifHasChanged(URL, callback) {
 And to test:
 
 ```js
-// Let's test the file "yourpage.html"
-ifHasChanged("yourpage.html", function (modified, visit) {
+// Let's test the file "your-page.html"
+ifHasChanged("your-page.html", function (modified, visit) {
   console.log(
     `The page '${this.filepath}' has been changed on ${new Date(
       nModified,

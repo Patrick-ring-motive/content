@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array
 
 {{JSRef}}
 
-The **`Array`** object, as with arrays in other programming languages, enables [storing a collection of multiple items under a single variable name](/en-US/docs/Learn/JavaScript/First_steps/Arrays), and has members for [performing common array operations](#examples).
+The **`Array`** object, as with arrays in other programming languages, enables [storing a collection of multiple items under a single variable name](/en-US/docs/Learn_web_development/Core/Scripting/Arrays), and has members for [performing common array operations](#examples).
 
 ## Description
 
@@ -378,7 +378,7 @@ These properties are own properties of each `Array` instance.
 This section provides some examples of common array operations in JavaScript.
 
 > [!NOTE]
-> If you're not yet familiar with array basics, consider first reading [JavaScript First Steps: Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays), which [explains what arrays are](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array), and includes other examples of common array operations.
+> If you're not yet familiar with array basics, consider first reading [JavaScript First Steps: Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Arrays), which [explains what arrays are](/en-US/docs/Learn_web_development/Core/Scripting/Arrays#what_is_an_array), and includes other examples of common array operations.
 
 ### Create an array
 
@@ -679,7 +679,7 @@ All built-in array-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/R
 const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 ```
 
-You can also create deep copies using the [`structuredClone()`](/en-US/docs/Web/API/structuredClone) method, which has the advantage of allowing [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) in the source to be _transferred_ to the new copy, rather than just cloned.
+You can also create deep copies using the {{DOMxRef("Window.structuredClone", "structuredClone()")}} method, which has the advantage of allowing [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) in the source to be _transferred_ to the new copy, rather than just cloned.
 
 Finally, it's important to understand that assigning an existing array to a new variable doesn't create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array's name and the new variable name are just two names for the exact same object (and so will always evaluate as [strictly equivalent](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using)). Therefore, if you make any changes at all either to the value of the original array or to the value of the new variable, the other will change, too:
 

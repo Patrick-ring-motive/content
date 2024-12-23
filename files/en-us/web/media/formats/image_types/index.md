@@ -597,7 +597,7 @@ Typically, modern content should use [PNG](#png_portable_network_graphics) for l
 ### ICO (Microsoft Windows icon)
 
 The ICO (Microsoft Windows icon) file format was designed by Microsoft for desktop icons of Windows systems.
-However, early versions of Internet Explorer introduced the ability for a website to provide an ICO file named `favicon.ico` in a website's root directory to specify a **[favicon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)** — an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.
+However, early versions of Internet Explorer introduced the ability for a website to provide an ICO file named `favicon.ico` in a website's root directory to specify a **[favicon](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site)** — an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.
 
 An ICO file can contain multiple icons, and begins with a directory listing details about each.
 Following the directory comes the data for the icons.
@@ -1034,8 +1034,8 @@ However, software reading TIFF files is only required to support the first image
 TIFF supports a variety of color spaces, not just RGB.
 These include CMYK, YCbCr, and others, making TIFF a good choice for storing images intended for print, film, or television media.
 
-Long ago, some browsers supported TIFF images in web content; today, however, you need to use special libraries or browser add-ons to do so.
-As such, TIFF files are not useful within the context of web content, _but_ it's common to provide downloadable TIFF files when distributing photos and other artwork intended for precision editing or printing.
+Other than Safari, browsers do not natively support TIFF images in web content except by using special libraries or browser add-ons.
+As such, TIFF files are not broadly used for displaying web content, _but_ it's common to provide downloadable TIFF files when distributing photos and other artwork intended for precision editing or printing.
 
 <table class="standard-table">
   <tbody>
@@ -1050,13 +1050,13 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
     <tr>
       <th scope="row">Specification</th>
       <td>
-        <a href="https://www.adobe.com/devnet-apps/photoshop/fileformatashtml">https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/#50577413_pgfId-1035272</a>
+        <a href="https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/">https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/#50577413_pgfId-1035272</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        No browsers integrate support for TIFF; its value is as a download format
+        Safari
       </td>
     </tr>
     <tr>

@@ -72,7 +72,7 @@ reportButton.addEventListener("click", () => {
 
 {{EmbedLiveSample("Basic usage", "100%", 120)}}
 
-When `false`, if the value is missing, is below 21, is above 65, or is othewise invalid, an error message appears, an invalid event is fired, and we log that invalid event to the console.
+When `false`, if the value is missing, is below 21, is above 65, or is otherwise invalid, an error message appears, an invalid event is fired, and we log that invalid event to the console.
 
 ### Custom error message
 
@@ -165,6 +165,6 @@ If you activate the "reportValidity()" button before entering an age, the `repor
 - {{domxref("HTMLInputElement.checkValidity()")}}
 - {{HTMLElement("input")}}
 - {{HTMLElement("form")}}
-- [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - CSS {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes

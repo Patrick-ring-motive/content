@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.createShaderModule
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createShaderModule()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUShaderModule")}} from a string of [WGSL](https://gpuweb.github.io/gpuweb/wgsl/) source code.
@@ -48,6 +48,12 @@ createShaderModule(descriptor)
 ### Return value
 
 A {{domxref("GPUShaderModule")}} object instance.
+
+### Validation
+
+The following criteria must be met when calling **`createShaderModule()`**, otherwise a {{domxref("GPUValidationError")}} is generated and an invalid {{domxref("GPUShaderModule")}} object is returned:
+
+- If your shader's WGSL code uses the half-precision floating-point type [`f16`](https://gpuweb.github.io/gpuweb/wgsl/#extension-f16), it includes `enable f16;` at the top, and the associated {{domxref("GPUDevice")}} is created with the `shader-f16` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) enabled.
 
 ## Examples
 

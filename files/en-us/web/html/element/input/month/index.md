@@ -8,12 +8,12 @@ browser-compat: html.elements.input.type_month
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`month`** create input fields that let the user enter a month and year allowing a month and year to be easily entered.
-The value is a string whose value is in the format "`YYYY-MM`", where `YYYY` is the four-digit year and `MM` is the month number.
+The value is a string whose value is in the format `YYYY-MM`, where `YYYY` is the four-digit year and `MM` is the month number.
 
 {{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
 
 The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop — and most modern mobile browser versions — having usable implementations.
-In browsers that don't support `month` inputs, the control degrades gracefully to a simple [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
+In browsers that don't support `month` inputs, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
 
 For those of you using a browser that doesn't support `month`, the screenshot below shows what it looks like in Chrome and Opera.
 Clicking the down arrow on the right-hand side brings up a date picker that lets you select the month and year.
@@ -26,7 +26,7 @@ The Microsoft Edge `month` control looks like this:
 
 ## Value
 
-A string representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("`-`"), followed by the two-digit month).
+A string representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen (`-`), followed by the two-digit month).
 The format of the month string used by this input type is described in [Month strings](/en-US/docs/Web/HTML/Date_and_time_formats#month_strings).
 
 ### Setting a default value
@@ -75,13 +75,13 @@ The values provided are suggestions, not requirements: users can select from thi
 
 The latest year and month, in the string format discussed in the [Value](#value) section above, to accept.
 If the [`value`](/en-US/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
-If the value of the `max` attribute isn't a valid string in "`yyyy-MM`" format, then the element has no maximum value.
+If the value of the `max` attribute isn't a valid string in `yyyy-MM` format, then the element has no maximum value.
 
 This value must specify a year-month pairing later than or equal to the one specified by the `min` attribute.
 
 ### min
 
-The earliest year and month to accept, in the same "`yyyy-MM`" format described above.
+The earliest year and month to accept, in the same `yyyy-MM` format described above.
 If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 If a value is specified for `min` that isn't a valid year and month string, the input has no minimum value.
 
@@ -117,7 +117,7 @@ We'll look at basic and more complex uses of `<input type="month">`, then offer 
 
 ### Basic uses of month
 
-The simplest use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
+The most basic use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
 <form>
@@ -526,6 +526,5 @@ function populateYears() {
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers)
+- [Date and Time picker tutorial](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#date_and_time_pickers)
 - [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week)
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

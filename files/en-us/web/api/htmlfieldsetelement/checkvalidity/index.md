@@ -10,6 +10,9 @@ browser-compat: api.HTMLFieldSetElement.checkValidity
 
 The **`checkValidity()`** method of the {{domxref("HTMLFieldSetElement")}} interface checks if the element is valid, but always returns true because {{HTMLElement("fieldset")}} elements are never candidates for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 
+> [!NOTE]
+> The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are applied to `<fieldset>` elements based on the validity of its descendant form controls, not the fieldset itself.
+
 ## Syntax
 
 ```js-nolint
@@ -46,5 +49,5 @@ console.log(element.checkValidity());
 - {{domxref("HTMLFieldSetElement.reportValidity()")}}
 - {{HTMLElement("fieldset")}}
 - {{HTMLElement("form")}}
-- [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Learn: Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)

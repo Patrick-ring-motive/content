@@ -312,7 +312,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
 
 \[2] Firefox did not add support for the <kbd>Symbol</kbd> key until Firefox 37.
 
-\[3] Firefox generates the key value `"OS`" for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
+\[3] Firefox generates the key value `"OS"` for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
 
 \[4] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug [Firefox bug 900750](https://bugzil.la/900750) and [Chrome bug 25503](https://crbug.com/25503) for further details.
 
@@ -1361,6 +1361,8 @@ Some keys are common across multiple languages, while others exist only on keybo
 
 \[1] On the _X Window System_, the <kbd>Compose</kbd> key is called the <kbd>Multi</kbd> key.
 
+<!-- cSpell:ignore Nonconvert -->
+
 \[2] The <kbd>NonConvert</kbd> key is reported as `"Nonconvert"` instead of the correct `"NonConvert"` by Firefox versions 36 and earlier.
 
 \[3] The <kbd>Process</kbd> key currently returns `"Unidentified"` in Firefox. Google Chrome returns the value of the key as if IME were not in use.
@@ -1577,7 +1579,7 @@ These keys are only available on Japanese keyboards.
       <td></td>
     </tr>
     <tr>
-      <td><code>"ZenkakuHanaku"</code> [6]</td>
+      <td><code>"ZenkakuHankaku"</code> [6]</td>
       <td>
         The <kbd>Zenkaku/Hankaku</kbd> (full width/half width) toggle key.
       </td>
@@ -2157,7 +2159,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F16</code> (0x7F)</td>
       <td><code>kVK_F16</code> (0x6A)</td>
       <td>
-        <code>GDK_KEY_F16</code> (0xFFCD)<br /><code>Qt::Key_F16</code>6
+        <code>GDK_KEY_F16</code> (0xFFCD)<br /><code>Qt::Key_F16</code>
         (0x0100003F)
       </td>
       <td><code>KEYCODE_F16</code></td>
@@ -3414,7 +3416,7 @@ The values below are derived in part from a number of consumer electronics techn
     </tr>
     <tr>
       <td><code>"Lock"</code></td>
-      <td>Locks or unlocks the currently selected content or pgoram.</td>
+      <td>Locks or unlocks the currently selected content or program.</td>
       <td><code>VK_LOCK</code></td>
       <td></td>
       <td></td>
@@ -4375,7 +4377,7 @@ Some keyboards offer special keys for launching or switching to certain common a
 
 \[3] Google Chrome 57 and earlier returned `"LaunchCalculator"` instead of `"LaunchApplication2"`. See [Chrome Bug 612743](https://crbug.com/612743) for more information.
 
-\[4] Prior to Firefox 37, Firefox returned the key code `"LaunchApplication1"` instead of "`LaunchWebBrowser"` for the Web browser key.
+\[4] Prior to Firefox 37, Firefox returned the key code `"LaunchApplication1"` instead of `"LaunchWebBrowser"` for the Web browser key.
 
 \[5] Firefox introduced support for this key in Firefox 37. Prior to that, this key was reported as `"Unidentified"`.
 

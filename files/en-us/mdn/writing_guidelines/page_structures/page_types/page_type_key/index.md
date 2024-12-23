@@ -38,13 +38,13 @@ This section lists page types that are specific to a single area of MDN.
 
 ### Learning Area page types
 
-This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn_web_development). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
 
-- `learn-topic`: an overview of a topic, that is, a collection of modules like [_CSS_](/en-US/docs/Learn/CSS).
-- `learn-module` an overview of a module, that is, an ordered collection of guides, like [_Introduction to HTML_](/en-US/docs/Learn/HTML/Introduction_to_HTML).
-- `learn-module-chapter` a guide that is part of a module, like [_Mobile accessibility_](/en-US/docs/Learn/Accessibility/Mobile).
-- `learn-module-assessment` a special guide with an activity allowing to assess the comprehension of a module or a part of it, like [_Test your skills: basic controls_](/en-US/docs/Learn/Forms/Test_your_skills:_Basic_controls).
-- `learn-faq`: the answer to a specific question about web development, like [_What is a domain name?_](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name).
+- `learn-topic`: an overview of a topic, that is, a collection of modules like [_CSS_](/en-US/docs/Learn_web_development/Core/Styling_basics).
+- `learn-module` an overview of a module, that is, an ordered collection of guides, like [_Structuring content with HTML_](/en-US/docs/Learn_web_development/Core/Structuring_content).
+- `learn-module-chapter` a guide that is part of a module, like [_Mobile accessibility_](/en-US/docs/Learn_web_development/Core/Accessibility/Mobile).
+- `learn-module-assessment` a special guide with an activity allowing to assess the comprehension of a module or a part of it, like [_Test your skills: basic controls_](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls).
+- `learn-faq`: the answer to a specific question about web development, like [_What is a domain name?_](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name).
 
 ### Accessibility page types
 
@@ -136,7 +136,6 @@ This section lists `page-type` values for pages under [Web/SVG](/en-US/docs/Web/
 This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/API). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `web-api-overview`: gives an overview of a Web API, like the [Fetch API](/en-US/docs/Web/API/Fetch_API).
-- `web-api-global-function`: a global function, like [`fetch()`](/en-US/docs/Web/API/Window/fetch).
 - `web-api-interface`: a Web API interface, like [`Request`](/en-US/docs/Web/API/Request).
 - `web-api-constructor`: a constructor, like [`Request()`](/en-US/docs/Web/API/Request/Request).
 - `web-api-instance-method`: an instance method, like [`cache.add()`](/en-US/docs/Web/API/Cache/add).
@@ -195,7 +194,6 @@ This section lists `page-type` values for pages under [Web/XPath](/en-US/docs/We
 This section lists `page-type` values for pages under [Web/XSLT](/en-US/docs/Web/XSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/Web/XSLT/Element/message).
-- `xslt-axis`: an axis of XSLT, like [`ancestor`](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor).
 
 ### EXSLT page types
 

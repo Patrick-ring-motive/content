@@ -319,7 +319,7 @@ function doIt() {
 
 ### Loop initialization
 
-When [loops](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) are required, choose the appropriate one from [`for(;;)`](/en-US/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while), etc.
+When [loops](/en-US/docs/Learn_web_development/Core/Scripting/Loops) are required, choose the appropriate one from [`for(;;)`](/en-US/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while), etc.
 
 - When iterating through all collection elements, avoid using the classical `for (;;)` loop; prefer `for...of` or `forEach()`. Note that if you are using a collection that is not an `Array`, you have to check that `for...of` is actually supported (it requires the variable to be iterable), or that the `forEach()` method is actually present.
 
@@ -707,6 +707,8 @@ For inserting values into strings, use [template literals](/en-US/docs/Web/JavaS
 ### Variable names
 
 Good variable names are essential to understanding code.
+
+<!-- cSpell:ignore acclmtr -->
 
 - Use short identifiers, and avoid non-common abbreviations. Good variable names are usually between 3 to 10-character long, but as a hint only. For example, `accelerometer` is more descriptive than abbreviating to `acclmtr` for the sake of character length.
 - Try to use real-world relevant examples where each variable has clear semantics. Only fall back to placeholder names like `foo` and `bar` when the example is simple and contrived.

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCommandEncoder.beginComputePass
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`beginComputePass()`** method of the
 {{domxref("GPUCommandEncoder")}} interface starts encoding a compute pass, returning a {{domxref("GPUComputePassEncoder")}} that can be used to control computation.
@@ -39,7 +39,7 @@ beginComputePass(descriptor)
         - `querySet`: The {{domxref("GPUQuerySet")}} that the timestamp will be written to.
 
         > [!NOTE]
-        > To use timestamp queries, the `timestamp-query` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
+        > The `timestamp-query` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to use timestamp queries.
 
 ### Return value
 

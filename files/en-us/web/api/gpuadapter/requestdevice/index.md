@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUAdapter.requestDevice
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`requestDevice()`** method of the
 {{domxref("GPUAdapter")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUDevice")}} object, which is the primary interface for communicating with the GPU.
@@ -104,7 +104,7 @@ async function init() {
 
   const device = await adapter.requestDevice({
     defaultQueue: {
-      label: "myqueue",
+      label: "my_queue",
     },
     requiredFeatures,
     requiredLimits,

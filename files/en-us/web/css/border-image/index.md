@@ -86,7 +86,7 @@ Assistive technology cannot parse border images. If the image contains informati
 
 In this example, we will apply a diamond pattern to an element's borders. The source for the border image is a ".png" file of 81 by 81 pixels, with three diamonds going vertically and horizontally:
 
-![an example borderimage](border.png)
+![Eight diamonds: four red diamonds, one in each corner, and four orange diamonds, one on each side. The middle is empty.](border.png)
 
 #### HTML
 
@@ -191,6 +191,6 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 - {{cssxref("outline")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
-- {{cssxref("url", "url()")}} function
+- {{cssxref("url_value", "&lt;url&gt;")}} type
 - Gradient functions: {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) on MDN blog (2023)

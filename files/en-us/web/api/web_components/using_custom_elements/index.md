@@ -17,7 +17,7 @@ There are two types of custom element:
 - **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation extends the behavior of select instances of the standard element.
 
   > [!NOTE]
-  > Please see the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
+  > Safari does not plan to support custom built-in elements. See the [`is` attribute](/en-US/docs/Web/HTML/Global_attributes/is) for more information.
 
 - **Autonomous custom elements** inherit from the HTML element base class {{domxref("HTMLElement")}}. You have to implement their behavior from scratch.
 
@@ -186,7 +186,7 @@ Some of these states can be set as attributes using HTML or JavaScript, while ot
 Whether external or internal, commonly these states have corresponding CSS [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that can be used to select and style the element when it is in a particular state.
 
 Autonomous custom elements (but not elements based on built-in elements) also allow you to define states and select against them using the [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class function.
-The code below shows how this works using the example of an autonomous custom element that has an internal state "`collapsed`".
+The code below shows how this works using the example of an autonomous custom element that has an internal state `"collapsed"`.
 
 The `collapsed` state is represented as a boolean property (with setter and getter methods) that is not visible outside of the element.
 To make this state selectable in CSS the custom element first calls {{domxref("HTMLElement.attachInternals()")}} in its constructor in order to attach an {{domxref("ElementInternals")}} object, which in turn provides access to a {{domxref("CustomStateSet")}} through the {{domxref("ElementInternals.states")}} property.
@@ -472,15 +472,15 @@ class ExpandingList extends HTMLUListElement {
         // Add click handler to this span
         newSpan.addEventListener("click", (e) => {
           // next sibling to the span should be the ul
-          const nextul = e.target.nextElementSibling;
+          const nextUl = e.target.nextElementSibling;
 
           // Toggle visible state and update class attribute on ul
-          if (nextul.style.display == "block") {
-            nextul.style.display = "none";
-            nextul.parentNode.setAttribute("class", "closed");
+          if (nextUl.style.display == "block") {
+            nextUl.style.display = "none";
+            nextUl.parentNode.setAttribute("class", "closed");
           } else {
-            nextul.style.display = "block";
-            nextul.parentNode.setAttribute("class", "open");
+            nextUl.style.display = "block";
+            nextUl.parentNode.setAttribute("class", "open");
           }
         });
         // Add the span and remove the bare text node from the li

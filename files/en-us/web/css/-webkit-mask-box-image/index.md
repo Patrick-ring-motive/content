@@ -90,7 +90,7 @@ Border repeat styles, when included, are interpreted in the order of `<repeat-x>
 
 Where:
 
-<mask-image-source> = {{cssxref("url", "&lt;uri&gt;")}} | <gradient> | none
+<mask-image-source> = {{cssxref("url_value", "&lt;url&gt;")}} | <gradient> | none
 
 <mask-image-offset> = <length> | <percentage> | <number>
 
@@ -102,7 +102,7 @@ Where:
 ### Setting an image
 
 ```css
-.exampleone {
+.example-one {
   -webkit-mask-box-image: url("mask.png");
 }
 ```
@@ -110,7 +110,7 @@ Where:
 ### Offsetting and filling an image
 
 ```css
-.exampletwo {
+.example-two {
   -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
 }
 ```

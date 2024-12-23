@@ -47,7 +47,7 @@ If the element is not a replaced element, then the given `ratio` is used.
 
 - `auto && <ratio>`
 
-  - : When both `auto` and a `<ratio>` are specified together, `auto` is used if the element is a replaced element with a natural aspect ratio. Otherwise, the specified ratio of `width` / `height` is used as the preferred aspect ratio.
+  - : When both `auto` and a `<ratio>` are specified together, `auto` is used if the element is a replaced element with a natural aspect ratio, like an `<img>` element. Otherwise, the specified ratio of `width` / `height` is used as the preferred aspect ratio.
 
 ## Formal definition
 
@@ -140,6 +140,6 @@ Note how the first image without replaced content keeps the `3/2` aspect ratio, 
 ## See also
 
 - [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-- [Image aspect-ratio: preventing jank](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
+- [Image aspect-ratio: preventing jank](/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
 - [Designing an aspect ratio unit for CSS](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
 - [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)

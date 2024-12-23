@@ -18,7 +18,7 @@ In practice, web developers don't need to implement compression mechanisms, both
 
 Each data type has some redundancy, that is _wasted space_, in it. If text can typically have as much as 60% redundancy, this rate can be much higher for some other media like audio and video. Unlike text, these other media types use a lot of space to store their data and the need to optimize storage and regain space was apparent very early. Engineers designed the optimized compression algorithm used by file formats designed for this specific purpose. Compression algorithms used for files can be grouped into two broad categories:
 
-- _Loss-less compression_, where the compression-uncompression cycle doesn't alter the data that is recovered. It matches (byte to byte) with the original.
+- _Loss-less compression_, where the compression-decompression cycle doesn't alter the data that is recovered. It matches (byte to byte) with the original.
   For images, `gif` or `png` are using lossless compression.
 - _Lossy compression_, where the cycle alters the original data in a (hopefully) imperceptible way for the user.
   Video formats on the Web are lossy; the `jpeg` image format is also lossy.
@@ -127,7 +127,7 @@ sequenceDiagram
     Note over Node2: Compresses body and forwards message.
     Node2->>Node1: HTTP/1.1 200 OK<br/>Transfer-Encoding: br
 
-    Note over Node1: Uncompresses resource and returns message to Client.
+    Note over Node1: Decompresses resource and returns message to Client.
     Node1->>Client: HTTP/1.1 200 OK
 -->
 
@@ -136,3 +136,12 @@ sequenceDiagram
 In practice, hop-by-hop compression is transparent for the server and the client, and is rarely used. {{HTTPHeader("TE")}} and {{HTTPHeader("Transfer-Encoding")}} are mostly used to send a response by chunks, allowing to start transmitting a resource without knowing its length.
 
 Note that using {{HTTPHeader("Transfer-Encoding")}} and compression at the hop level is so rare that most servers, like Apache, Nginx, or IIS, have no easy way to configure it. Such configuration usually happens at the proxy level.
+
+## See also
+
+- Glossary terms:
+  - {{glossary("Brotli compression")}}
+  - {{Glossary("Gzip compression")}}
+  - {{glossary("Lossless compression")}}
+  - {{glossary("Lossy compression")}}
+  - {{Glossary("Zstandard compression")}}

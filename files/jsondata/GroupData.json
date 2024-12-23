@@ -149,10 +149,14 @@
         "ImageBitmapRenderingContext",
         "ImageData",
         "OffscreenCanvas",
+        "OffscreenCanvasRenderingContext2D",
         "Path2D",
         "TextMetrics"
       ],
-      "methods": ["createImageBitmap()"],
+      "methods": [
+        "Window.createImageBitmap()",
+        "WorkerGlobalScope.createImageBitmap()"
+      ],
       "properties": [],
       "events": []
     },
@@ -248,13 +252,6 @@
       ],
       "methods": [],
       "properties": ["Navigator.credentials"],
-      "events": []
-    },
-    "CSS Counter Styles": {
-      "overview": ["CSS Counter Styles"],
-      "interfaces": ["CSSCounterStyleRule"],
-      "methods": [],
-      "properties": [],
       "events": []
     },
     "CSS Font Loading API": {
@@ -609,7 +606,12 @@
       "guides": ["/docs/Web/API/Fullscreen_API/Guide"],
       "interfaces": [],
       "methods": ["Document.exitFullscreen()", "Element.requestFullscreen()"],
-      "properties": ["Document.fullscreen", "Document.fullscreenElement"],
+      "properties": [
+        "Document.fullscreen",
+        "Document.fullscreenElement",
+        "Document.fullscreenEnabled",
+        "ShadowRoot.fullscreenElement"
+      ],
       "events": [
         "Document: fullscreenchange",
         "Document: fullscreenerror",
@@ -787,7 +789,7 @@
         "Window",
         "WorkletGlobalScope"
       ],
-      "methods": ["reportError"],
+      "methods": [],
       "properties": [],
       "events": [
         "Document: DOMContentLoaded",
@@ -802,10 +804,11 @@
         "Element: focus",
         "Element: select",
         "Element: show",
-        "HTMLDetailsElement: toggle",
         "HTMLDialogElement: cancel",
         "HTMLDialogElement: close",
         "HTMLElement: input",
+        "HTMLElement: beforetoggle",
+        "HTMLElement: toggle",
         "HTMLFormElement: reset",
         "HTMLFormElement: submit",
         "HTMLInputElement: change",
@@ -912,7 +915,7 @@
     },
     "Ink API": {
       "overview": ["Ink API"],
-      "interfaces": ["Ink", "InkPresenter"],
+      "interfaces": ["DelegatedInkTrailPresenter", "Ink"],
       "methods": [],
       "properties": ["Navigator.ink"],
       "events": []
@@ -942,6 +945,17 @@
       "methods": [],
       "properties": [],
       "events": []
+    },
+    "Invoker Commands API": {
+      "overview": ["Invoker Commands API"],
+      "guides": [],
+      "interfaces": ["CommandEvent"],
+      "methods": [],
+      "properties": [
+        "HTMLButtonElement.commandForElement",
+        "HTMLButtonElement.command"
+      ],
+      "events": ["HTMLElement: command"]
     },
     "Keyboard API": {
       "overview": ["Keyboard API"],
@@ -1020,6 +1034,9 @@
       ],
       "methods": ["HTMLVideoElement.getVideoPlaybackQuality()"],
       "properties": [
+        "HTMLMediaElement.buffered",
+        "HTMLMediaElement.seekable",
+        "HTMLMediaElement.srcObject",
         "AudioTrack.sourceBuffer",
         "VideoTrack.sourceBuffer",
         "TextTrack.sourceBuffer"
@@ -1161,8 +1178,8 @@
     },
     "Picture-in-Picture API": {
       "overview": ["Picture-in-Picture API"],
-      "guides": ["/docs/Web/API/Picture-in-Picture_API/Guide"],
-      "interfaces": ["PictureInPictureWindow"],
+      "guides": [],
+      "interfaces": ["PictureInPictureWindow", "PictureInPictureEvent"],
       "methods": [
         "HTMLVideoElement.requestPictureInPicture()",
         "Document.exitPictureInPicture()"
@@ -1170,12 +1187,12 @@
       "properties": [
         "HTMLVideoElement.disablePictureInPicture",
         "Document.pictureInPictureEnabled",
-        "Document.pictureInPictureElement"
+        "Document.pictureInPictureElement",
+        "ShadowRoot.pictureInPictureElement"
       ],
       "events": [
         "HTMLVideoElement: enterpictureinpicture",
-        "HTMLVideoElement: leavepictureinpicture",
-        "PictureInPictureWindow: resize"
+        "HTMLVideoElement: leavepictureinpicture"
       ]
     },
     "Pointer Events": {
@@ -1752,8 +1769,8 @@
       "properties": [],
       "events": []
     },
-    "View Transitions API": {
-      "overview": ["View Transitions API"],
+    "View Transition API": {
+      "overview": ["View Transition API"],
       "guides": ["/docs/Web/API/View_Transitions_API/Using"],
       "interfaces": ["ViewTransition"],
       "methods": ["Document.startViewTransition()"],
@@ -2094,7 +2111,7 @@
         "HIDConnectionEvent"
       ],
       "methods": [],
-      "properties": ["Navigator.hid"],
+      "properties": ["Navigator.hid", "WorkerNavigator.hid"],
       "events": []
     },
     "Web Locks API": {
@@ -2251,9 +2268,15 @@
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_servers",
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_server",
         "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java",
-        "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno"
+        "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno",
+        "/docs/Web/API/WebSockets_API/Using_WebSocketStream"
       ],
-      "interfaces": ["WebSocket", "CloseEvent", "MessageEvent"],
+      "interfaces": [
+        "WebSocket",
+        "WebSocketStream",
+        "CloseEvent",
+        "MessageEvent"
+      ],
       "methods": [],
       "properties": [],
       "events": []

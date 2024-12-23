@@ -10,7 +10,7 @@ browser-compat:
 
 {{HTMLSidebar}}
 
-The **`min`** attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [validation](/en-US/docs/Learn/Forms/Form_validation). This value must be less than or equal to the value of the `max` attribute.
+The **`min`** attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation). This value must be less than or equal to the value of the `max` attribute.
 
 Some input types have a default minimum. If the input has no default minimum and a value is specified for `min` that can't be converted to a valid number (or no minimum value is set), the input has no minimum value.
 
@@ -50,14 +50,14 @@ It is valid for the input types including: {{HTMLElement("input/date", "date")}}
     </tr>
     <tr>
       <td>{{HTMLElement("input/time", "time")}}</td>
-      <td><code>hh:mm</code></td>
+      <td><code>HH:mm</code></td>
       <td><code>&#x3C;input type="time" min="09:00" step="900"></code></td>
     </tr>
     <tr>
       <td>
         {{HTMLElement("input/datetime-local", "datetime-local")}}
       </td>
-      <td><code>yyyy-mm-ddThh:mm</code></td>
+      <td><code>yyyy-mm-ddTHH:mm</code></td>
       <td>
         <code>&#x3C;input type="datetime-local" min="2019-12-25T19:30"></code>
       </td>
@@ -155,7 +155,7 @@ Provide instructions to help users understand how to complete the form and use i
 - [`max`](/en-US/docs/Web/HTML/Attributes/max)
 - other meter attributes: [`low`](/en-US/docs/Web/HTML/Attributes/low), [`high`](/en-US/docs/Web/HTML/Attributes/high), [`optimum`](/en-US/docs/Web/HTML/Attributes/optimum)
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.rangeUnderflow')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}
