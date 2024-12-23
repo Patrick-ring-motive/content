@@ -88,6 +88,41 @@ const buffer = new ArrayBuffer(8);
 const view = new Int32Array(buffer);
 ```
 
+### String To ArrayBuffer
+
+Here is a simple way to synchronously convert a `String` to an `ArrayBuffer`.
+
+```js
+const str = "Hello World!";
+const bytes = new TextEncoder().encode(str); // encode the string into an array of bytes
+const buffer = bytes.buffer; // retreive the ArrayBuffer representation 
+```
+
+Bringing it all together
+
+```js
+const stringToBuffer = str => new TextEncoder().encode(str).buffer;
+```
+
+### ArrayBuffer To String
+
+Here is the reverse operation to convert an `ArrayBuffer` to a `String`.
+
+```js
+const buffer = new ArrayBuffer(8)
+const bytes = new Uint8Array(buffer); // convert the ArrayBuffer to an array of bytes
+const str = new TextDecoder().decode(bytes); // decode the byte array to text
+```
+
+Bringing it all together
+
+```js
+const bufferToString = buffer => new TextDecoder().decode(new Uint8Array(buffer));
+```
+
+> [!NOTE]
+> Both {{jsxref("TextEncoder")}} and {{jsxref("TextDecoder")}} use UTF-8 encoding by default. This ensures that characters from most languages and emoji are encoded and decoded correctly.
+
 ## Specifications
 
 {{Specifications}}
