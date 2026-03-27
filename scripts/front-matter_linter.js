@@ -2,14 +2,21 @@ import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 
-import { eachLimit } from "async";
+import {
+  eachLimit
+} from "async";
 import cliProgress from "cli-progress";
 
 import fdir_pkg from "fdir";
-const { fdir, PathsOutput } = fdir_pkg;
+const {
+  fdir,
+  PathsOutput
+} = fdir_pkg;
 
 import caporal from "@caporal/core";
-const { program } = caporal;
+const {
+  program
+} = caporal;
 
 import {
   getAjvValidator,
@@ -50,7 +57,9 @@ async function lintFrontMatter(filesAndDirectories, options) {
 
   options.validator = getAjvValidator(options.config.schema);
 
-  const progressBar = new cliProgress.SingleBar({ etaBuffer: 100 });
+  const progressBar = new cliProgress.SingleBar({
+    etaBuffer: 100
+  });
   progressBar.start(files.length, 0);
 
   const errors = [];
@@ -87,9 +96,15 @@ async function lintFrontMatter(filesAndDirectories, options) {
 }
 
 function tryOrExit(f) {
-  return async ({ options = {}, ...args }) => {
+  return async ({
+    options = {},
+    ...args
+  }) => {
     try {
-      await f({ options, ...args });
+      await f({
+        options,
+        ...args
+      });
     } catch (error) {
       if (options.verbose || options.v) {
         console.error(error.stack);
@@ -112,7 +127,11 @@ program
     default: ["./files/en-us"],
   })
   .action(
-    tryOrExit(({ args, options, logger }) => {
+    tryOrExit(({
+      args,
+      options,
+      logger
+    }) => {
       const cwd = process.cwd();
       const files = (args.files || []).map((f) => path.resolve(cwd, f));
       if (!files.length) {

@@ -1,5 +1,7 @@
 import fs from "node:fs";
-import { fileURLToPath } from "node:url";
+import {
+  fileURLToPath
+} from "node:url";
 import AJV from "ajv";
 import addFormats from "ajv-formats";
 

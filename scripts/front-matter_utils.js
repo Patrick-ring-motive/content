@@ -6,14 +6,19 @@ import * as prettier from "prettier";
 import AJV from "ajv";
 import grayMatter from "gray-matter";
 import addFormats from "ajv-formats";
-import { betterAjvErrors } from "@apideck/better-ajv-errors";
+import {
+  betterAjvErrors
+} from "@apideck/better-ajv-errors";
 
 export function getRelativePath(filePath) {
   return path.relative(process.cwd(), filePath);
 }
 
 export function getAjvValidator(schema) {
-  const ajv = new AJV({ allowUnionTypes: true, allErrors: true });
+  const ajv = new AJV({
+    allowUnionTypes: true,
+    allErrors: true
+  });
   addFormats.default(ajv);
   return ajv.compile(schema);
 }
@@ -86,16 +91,18 @@ export async function checkFrontMatter(filePath, options) {
       quotingType: '"',
     });
     yml = yml.replace(/[\s\n]+$/g, "");
-    yml = await prettier.format(yml, { parser: "yaml" });
+    yml = await prettier.format(yml, {
+      parser: "yaml"
+    });
     content = `---\n${yml}---\n${document.content}`;
   } else {
     content = null;
   }
 
   return [
-    errors.length
-      ? `Error: ${getRelativePath(filePath)}\n${errors.join("\n")}`
-      : null,
+    errors.length ?
+    `Error: ${getRelativePath(filePath)}\n${errors.join("\n")}` :
+    null,
     fixableError,
     content,
   ];

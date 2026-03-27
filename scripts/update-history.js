@@ -4,13 +4,19 @@
  */
 
 import fs from "node:fs";
-import { execGit } from "./utils.js";
+import {
+  execGit
+} from "./utils.js";
 
 const HUSKY_ROOT = ".husky/_/";
 const HISTORY_FILE = HUSKY_ROOT + "history";
 
-const branch = execGit(["rev-parse", "--abbrev-ref", "HEAD"], { cwd: "." });
+const branch = execGit(["rev-parse", "--abbrev-ref", "HEAD"], {
+  cwd: "."
+});
 if (branch === "main" && fs.existsSync(HUSKY_ROOT)) {
-  const hash = execGit(["rev-parse", "HEAD"], { cwd: "." });
+  const hash = execGit(["rev-parse", "HEAD"], {
+    cwd: "."
+  });
   fs.writeFileSync(HISTORY_FILE, hash);
 }

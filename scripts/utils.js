@@ -6,7 +6,9 @@ export const IMG_RX = /(\.png|\.jpg|\.svg|\.gif)$/gim;
 export const SLUG_RX = /(?<=\nslug: ).*?$/gm;
 
 export async function* walkSync(dir) {
-  const files = await fs.readdir(dir, { withFileTypes: true });
+  const files = await fs.readdir(dir, {
+    withFileTypes: true
+  });
   for (const file of files) {
     if (file.isDirectory()) {
       yield* walkSync(path.join(dir, file.name));
@@ -18,10 +20,14 @@ export async function* walkSync(dir) {
 
 export function execGit(args, opts = {}, root = null) {
   const gitRoot = root || getRootDir();
-  const { status, error, stdout, stderr } = childProcess.spawnSync(
+  const {
+    status,
+    error,
+    stdout,
+    stderr
+  } = childProcess.spawnSync(
     "git",
-    args,
-    {
+    args, {
       cwd: gitRoot,
       // Default is 1MB
       maxBuffer: 1024 * 1024 * 100, // 100MB
@@ -57,9 +63,9 @@ export function isImagePath(path) {
 export function getLocations(content, searchValue) {
   const lineLengths = content.split("\n").map((line) => line.length);
   const searchRx =
-    searchValue instanceof RegExp
-      ? searchValue
-      : new RegExp(searchValue, "mig");
+    searchValue instanceof RegExp ?
+    searchValue :
+    new RegExp(searchValue, "mig");
   const matches = [...content.matchAll(searchRx)].map((match) => match.index);
   const positions = [];
 

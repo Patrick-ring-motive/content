@@ -50,40 +50,44 @@ function getDeletedSlugs(fromStaging = true) {
 
   if (fromStaging) {
     // git status --short --porcelain
-    result = execGit(["status", "--short", "--porcelain"], { cwd: "." });
+    result = execGit(["status", "--short", "--porcelain"], {
+      cwd: "."
+    });
     if (result.trim()) {
       deletedSlugs.push(
         ...result
-          .split("\n")
-          .filter(
-            (line) =>
-              /^\s*D\s+/gi.test(line) &&
-              line.includes("files/en-us") &&
-              (IMG_RX.test(line) || line.includes("index.md")),
-          )
-          .map((line) =>
-            line.replaceAll(/^\s+|files\/en-us\/|\/index.md/gm, ""),
-          )
-          .map((line) => line.split(/\s+/)[1]),
+        .split("\n")
+        .filter(
+          (line) =>
+          /^\s*D\s+/gi.test(line) &&
+          line.includes("files/en-us") &&
+          (IMG_RX.test(line) || line.includes("index.md")),
+        )
+        .map((line) =>
+          line.replaceAll(/^\s+|files\/en-us\/|\/index.md/gm, ""),
+        )
+        .map((line) => line.split(/\s+/)[1]),
       );
     }
   } else {
     // git diff --summary origin/main...HEAD
-    result = execGit(["diff", "--summary", "origin/main...HEAD"], { cwd: "." });
+    result = execGit(["diff", "--summary", "origin/main...HEAD"], {
+      cwd: "."
+    });
     if (result.trim()) {
       deletedSlugs.push(
         ...result
-          .split("\n")
-          .filter(
-            (line) =>
-              line.includes("delete mode") &&
-              line.includes("files/en-us") &&
-              (IMG_RX.test(line) || line.includes("index.md")),
-          )
-          .map((line) => line.replace(/^\s*delete mode \d+ /gm, ""))
-          .map((line) =>
-            line.replaceAll(/^\s+|files\/en-us\/|\/index.md/gm, ""),
-          ),
+        .split("\n")
+        .filter(
+          (line) =>
+          line.includes("delete mode") &&
+          line.includes("files/en-us") &&
+          (IMG_RX.test(line) || line.includes("index.md")),
+        )
+        .map((line) => line.replace(/^\s*delete mode \d+ /gm, ""))
+        .map((line) =>
+          line.replaceAll(/^\s+|files\/en-us\/|\/index.md/gm, ""),
+        ),
       );
     }
   }
@@ -94,10 +98,14 @@ function getFragmentDetails(fromStaging = true) {
 
   if (fromStaging) {
     // get staged and unstaged changes
-    result = execGit(["diff", "HEAD"], { cwd: "." });
+    result = execGit(["diff", "HEAD"], {
+      cwd: "."
+    });
   } else {
     // get diff between branch base and HEAD
-    result = execGit(["diff", "origin/main...HEAD"], { cwd: "." });
+    result = execGit(["diff", "origin/main...HEAD"], {
+      cwd: "."
+    });
   }
 
   if (result.trim()) {
@@ -117,7 +125,7 @@ function getFragmentDetails(fromStaging = true) {
 
       const removedHeaderRx = /^-#+ .*$/gm;
       [...segment.matchAll(removedHeaderRx)]
-        .map((match) => match[0].toLowerCase())
+      .map((match) => match[0].toLowerCase())
         .map((header) => header.replace(/-#+ /g, ""))
         .map((header) => stringToFragment(header))
         .filter((header) => !addedFragments.includes(header))

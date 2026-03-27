@@ -44,24 +44,29 @@ if (process.argv[2] === "--help" || process.argv[2] === "-h") {
 }
 
 // get staged and unstaged changes
-const result = execGit(["status", "--short", "--porcelain"], { cwd: "." });
+const result = execGit(["status", "--short", "--porcelain"], {
+  cwd: "."
+});
 if (result.trim()) {
   movedFiles.push(
     ...result
-      .split("\n")
-      .filter(
-        (line) =>
-          /^\s*RM?\s+/gi.test(line) &&
-          line.includes("files/en-us") &&
-          (IMG_RX.test(line) || line.includes("index.md")),
-      )
-      .map((line) =>
-        line.replaceAll(/^\s*RM?\s+|files\/en-us\/|\/index.md/gm, ""),
-      )
-      .map((line) => line.split(/ -> /))
-      .map((tuple) => {
-        return { from: tuple[0], to: tuple[1] };
-      }),
+    .split("\n")
+    .filter(
+      (line) =>
+      /^\s*RM?\s+/gi.test(line) &&
+      line.includes("files/en-us") &&
+      (IMG_RX.test(line) || line.includes("index.md")),
+    )
+    .map((line) =>
+      line.replaceAll(/^\s*RM?\s+|files\/en-us\/|\/index.md/gm, ""),
+    )
+    .map((line) => line.split(/ -> /))
+    .map((tuple) => {
+      return {
+        from: tuple[0],
+        to: tuple[1]
+      };
+    }),
   );
 }
 
@@ -84,7 +89,10 @@ movedFiles = (
 
       if (redirectLine) {
         const urls = redirectLine.trim().split(/\s+/);
-        return { from: urls[0], to: urls[1] };
+        return {
+          from: urls[0],
+          to: urls[1]
+        };
       }
 
       if (isImagePath(tuple.from)) {
@@ -128,7 +136,7 @@ for await (const filePath of walkSync(getRootDir())) {
         if (isCheckOnly) {
           console.error(
             "File(s) have been moved. " +
-              "Run 'node scripts/update-moved-file-links.js' to update references.",
+            "Run 'node scripts/update-moved-file-links.js' to update references.",
           );
           process.exit(1);
         }
