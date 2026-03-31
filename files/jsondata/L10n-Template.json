@@ -11,7 +11,6 @@
     "zh-CN": "实验性。预期行为可能会在未来发生变更。",
     "zh-TW": "實驗性質。行為可能會在未來發生變動。"
   },
-
   "experimental_badge_abbreviation": {
     "de": "Experimentell",
     "en-US": "Experimental",
@@ -24,7 +23,6 @@
     "zh-CN": "实验性",
     "zh-TW": "實驗性質"
   },
-
   "deprecated_badge_title": {
     "de": "Veraltet. Nicht empfohlen für neue Webseiten.",
     "en-US": "Deprecated. Not for use in new websites.",
@@ -32,7 +30,6 @@
     "zh-CN": "已弃用。请不要在新的网站中使用。",
     "zh-TW": "已棄用。請不要在新的網站中使用。"
   },
-
   "deprecated_badge_abbreviation": {
     "de": "Veraltet",
     "en-US": "Deprecated",
@@ -44,7 +41,6 @@
     "zh-CN": "已弃用",
     "zh-TW": "已棄用"
   },
-
   "deprecated_header_copy": {
     "de": "Diese Funktion wird nicht mehr empfohlen. Obwohl einige Browser sie möglicherweise noch unterstützen, könnte sie bereits aus den relevanten Webstandards entfernt worden sein, in Kürze entfernt werden oder nur noch aus Kompatibilitätsgründen bestehen. Vermeiden Sie die Verwendung und aktualisieren Sie vorhandenen Code, falls möglich; siehe die <a href='#browser-kompatibilität'>Kompatibilitätstabelle</a> am Ende dieser Seite, um Ihre Entscheidung zu unterstützen. Beachten Sie, dass diese Funktion jederzeit aufhören könnte zu funktionieren.",
     "en-US": "This feature is no longer recommended. Though some browsers might still support it, it may have already been removed from the relevant web standards, may be in the process of being dropped, or may only be kept for compatibility purposes. Avoid using it, and update existing code if possible; see the <a href='#browser_compatibility'>compatibility table</a> at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.",
@@ -56,7 +52,6 @@
     "zh-CN": "不再推荐使用该特性。虽然一些浏览器仍然支持它，但也许已从相关的 web 标准中移除，也许正准备移除或出于兼容性而保留。请尽量不要使用该特性，并更新现有的代码；参见本页面底部的<a href='#浏览器兼容性'>兼容性表格</a>以指导你作出决定。请注意，该特性随时可能无法正常工作。",
     "zh-TW": "不推薦使用此功能。雖可能有一些瀏覽器仍然支援它，但也許已自相關的網頁標準中移除、正準備移除、或僅為了維持相容性而保留。避免使用此功能，盡可能更新現有程式；請參考頁面底部的<a href='#瀏覽器相容性'>相容性表格</a>來下決定。請注意：本功能可能隨時停止運作。"
   },
-
   "non_standard_badge_title": {
     "de": "Nicht standardisiert. Überprüfen Sie vor der Verwendung die Browser-Kompatibilität.",
     "en-US": "Non-standard. Check cross-browser support before using.",
@@ -64,7 +59,6 @@
     "zh-CN": "非标准。请在使用前检查跨浏览器支持。",
     "zh-TW": "非標準。請在使用前檢查跨瀏覽器支援。"
   },
-
   "non_standard_badge_abbreviation": {
     "de": "Nicht standardisiert",
     "en-US": "Non-standard",
@@ -75,7 +69,6 @@
     "ru": "Не стандартно",
     "zh-CN": "非标准"
   },
-
   "non_standard_header_copy": {
     "de": "Diese Funktion ist nicht standardisiert und befindet sich nicht auf dem Weg zur Standardisierung. Verwenden Sie sie nicht auf Produktionsseiten, die dem Web ausgesetzt sind: Sie funktioniert nicht für alle Benutzer. Es kann auch große Inkompatibilitäten zwischen Implementierungen geben, und das Verhalten kann sich in Zukunft ändern.",
     "en-US": "This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.",
@@ -86,7 +79,6 @@
     "ru": "Эта возможность не является стандартной и стандартизировать её пока никто не собирается. Не используйте её на сайтах, смотрящих во внешний мир: она будет работать не у всех пользователей. Также могут присутствовать большие несовместимости между реализациями и её поведение может в будущем измениться.",
     "zh-CN": "该特性是非标准的，请尽量不要在生产环境中使用它！"
   },
-
   "secure_context_label": {
     "de": "Sicherer Kontext",
     "en-US": "Secure context",
@@ -96,7 +88,6 @@
     "ja": "安全なコンテキスト用",
     "zh-CN": "安全上下文"
   },
-
   "secure_context_inline_copy": {
     "de": "Diese Funktion ist nur in sicheren Kontexten (HTTPS) verfügbar.",
     "en-US": "This feature is available only in secure contexts (HTTPS)",
@@ -106,7 +97,6 @@
     "ja": "この機能は安全なコンテキスト (HTTPS) でのみ利用できます",
     "zh-CN": "此功能仅在安全上下文（HTTPS）中可用"
   },
-
   "secure_context_header_copy": {
     "de": "Diese Funktion ist nur in <a href='/de/docs/Web/Security/Secure_Contexts'>sicheren Kontexten</a> (HTTPS) in einigen oder allen <a href='#browser-kompatibilität'>unterstützenden Browsern</a> verfügbar.",
     "en-US": "This feature is available only in <a href='/en-US/docs/Web/Security/Secure_Contexts'>secure contexts</a> (HTTPS), in some or all <a href='#browser_compatibility'>supporting browsers</a>.",
@@ -116,7 +106,6 @@
     "ja": "この機能は一部またはすべての<a href='#browser_compatibility'>対応しているブラウザー</a>において、<a href='/ja/docs/Web/Security/Secure_Contexts'>安全なコンテキスト</a> (HTTPS) でのみ利用できます。",
     "zh-CN": "此项功能仅在一些<a href='#浏览器兼容性'>支持的浏览器</a>的<a href='/zh-CN/docs/Web/Security/Secure_Contexts'>安全上下文</a>（HTTPS）中可用。"
   },
-
   "interactive_example_cta": {
     "de": "Probieren Sie es aus",
     "en-US": "Try it",
@@ -129,7 +118,6 @@
     "zh-CN": "尝试一下",
     "zh-TW": "嘗試一下"
   },
-
   "optional": {
     "de": "Optional",
     "en-US": "Optional",
@@ -140,7 +128,6 @@
     "zh-TW": "選擇性",
     "es": "Opcional"
   },
-
   "xref_csscomputed": {
     "de": "Berechneter Wert",
     "en-US": "Computed value",
@@ -151,7 +138,6 @@
     "ru": "Обработка значения",
     "zh-CN": "计算值"
   },
-
   "xref_cssinherited": {
     "de": "Vererbt",
     "en-US": "Inherited",
@@ -163,7 +149,6 @@
     "zh-CN": "是否是继承属性",
     "zh-TW": "繼承與否"
   },
-
   "xref_cssinitial": {
     "de": "Anfangswert",
     "en-US": "Initial value",
@@ -175,7 +160,6 @@
     "zh-CN": "初始值",
     "zh-TW": "預設值"
   },
-
   "readonly_badge_abbreviation": {
     "de": "Schreibgeschützt",
     "en-US": "Read only",
@@ -186,7 +170,6 @@
     "ru": "Только для чтения ",
     "zh-CN": "只读 "
   },
-
   "readonly_badge_title": {
     "de": "Dieser Wert kann nicht geändert werden.",
     "en-US": "This value may not be changed.",
@@ -196,7 +179,6 @@
     "ru": "Это значение изменять нельзя.",
     "zh-CN": "该属性的值无法更改"
   },
-
   "see_compat_table_copy": {
     "de": "<strong>Dies ist eine <a href='/de/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimentell'>experimentelle Technologie</a></strong><br />Überprüfen Sie die <a href='#browser-kompatibilität'>Browser-Kompatibilitätstabelle</a> sorgfältig vor der Verwendung auf produktiven Webseiten.",
     "es": "<strong>Esta es una <a href='/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental'>tecnología experimental</a></strong><br />Comprueba la <a href='#browser_compatibility'>Tabla de compabilidad de navegadores</a> cuidadosamente antes de usarla en producción.",
@@ -209,7 +191,6 @@
     "pt-BR": "<strong>Esta é uma <a href='/pt-BR/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental'>tecnologia experimental</a></strong><br />Verifique a <a href='#browser_compatibility'>tabela de compatibilidade entre Navegadores</a> cuidadosamente antes de usar essa funcionalidade em produção.",
     "ru": "<strong>Это экспериментальная технология</strong><br />Так как спецификация этой технологии ещё не стабилизировалась, смотрите <a href='#browser_compatibility'>таблицу совместимости</a> по поводу использования в различных браузерах. Также заметьте, что синтаксис и поведение экспериментальной технологии может измениться в будущих версиях браузеров, вслед за изменениями спецификации."
   },
-
   "available_in_worker__default": {
     "de": "Diese Funktion ist in <a href=\"/de/docs/Web/API/Web_Workers_API\">Web Workers</a> verfügbar.",
     "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>.",
@@ -221,14 +202,12 @@
     "ko": "이 기능은 <a href=\"/ko/docs/Web/API/Web_Workers_API\">Web Worker</a>에서 사용할 수 있습니다.",
     "ru": "Эта возможность доступна в <a href=\"/ru/docs/Web/API/Web_Workers_API\">Web Workers</a>."
   },
-
   "available_in_worker__worker": {
     "de": "Diese Funktion ist nur in <a href=\"/de/docs/Web/API/Web_Workers_API\">Web Workers</a> verfügbar.",
     "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>.",
     "ja": "この機能は<a href=\"/ja/docs/Web/API/Web_Workers_API\">ウェブワーカー</a>内でのみ利用可能です。",
     "zh-CN": "此特性仅在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a> 中可用。"
   },
-
   "available_in_worker__window_and_worker_except_service": {
     "de": "Diese Funktion ist in <a href=\"/de/docs/Web/API/Web_Workers_API\">Web Workers</a> verfügbar, mit Ausnahme von <a href=\"/de/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
     "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>, except for <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
@@ -236,54 +215,46 @@
     "zh-CN": "此特性在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a>（不包括 <a href=\"/zh-CN/docs/Web/API/Service_Worker_API\">Service Worker</a>）中可用。",
     "zh-TW": "此功能可在 <a href=\"/zh-TW/docs/Web/API/Web_Workers_API\">Web Worker</a>（不包括 <a href=\"/zh-TW/docs/Web/API/Service_Worker_API\">Service Worker</a>）中使用。"
   },
-
   "available_in_worker__window_and_worker_except_shared": {
     "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>, except for <a href=\"/en-US/docs/Web/API/SharedWorkerGlobalScope\">Shared Web Workers</a>.",
     "zh-CN": "此特性在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a>（不包括<a href=\"/zh-CN/docs/Web/API/SharedWorkerGlobalScope\">共享 Web Worker</a>）中可用。"
   },
-
   "available_in_worker__worker_except_service": {
     "de": "Diese Funktion ist nur in <a href=\"/de/docs/Web/API/Web_Workers_API\">Web Workers</a> verfügbar, mit Ausnahme von <a href=\"/de/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
     "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>, except for <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
     "ja": "この機能は<a href=\"/ja/docs/Web/API/Web_Workers_API\">ウェブワーカー</a>内でのみ利用可能ですが、<a href=\"/ja/docs/Web/API/Service_Worker_API\">サービスワーカー</a>では使用できません。",
     "zh-CN": "此特性仅在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a>（不包括 <a href=\"/zh-CN/docs/Web/API/Service_Worker_API\">Service Worker</a>）中可用。"
   },
-
   "available_in_worker__window_and_dedicated": {
     "de": "Diese Funktion ist in <a href=\"/en-US/docs/Web/API/DedicatedWorkerGlobalScope\">Dedicated Web Workers</a> verfügbar.",
     "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/DedicatedWorkerGlobalScope\">Dedicated Web Workers</a>.",
     "ja": "この機能は<a href=\"/ja/docs/Web/API/DedicatedWorkerGlobalScope\">専用ウェブワーカー</a>内で利用可能です。",
     "zh-CN": "此特性在<a href=\"/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope\">专用 Web Worker</a>中可用。"
   },
-
   "available_in_worker__dedicated": {
     "de": "Diese Funktion ist nur in <a href=\"/de/docs/Web/API/DedicatedWorkerGlobalScope\">Dedicated Web Workers</a> verfügbar.",
     "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/DedicatedWorkerGlobalScope\">Dedicated Web Workers</a>.",
     "ja": "この機能は<a href=\"/ja/docs/Web/API/DedicatedWorkerGlobalScope\">専用ウェブワーカー</a>内でのみ利用可能です。",
     "zh-CN": "此特性仅在<a href=\"/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope\">专用 Web Worker</a> 中可用。"
   },
-
   "available_in_worker__window_and_service": {
     "de": "Diese Funktion ist in <a href=\"/de/docs/Web/API/Service_Worker_API\">Service Workers</a> verfügbar.",
     "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
     "ja": "この機能は<a href=\"/ja/docs/Web/API/Service_Worker_API\">サービスワーカー</a>内で利用可能です。",
     "zh-CN": "此特性在 <a href=\"/zh-CN/docs/Web/API/Service_Worker_API\">Service Worker</a> 中可用。"
   },
-
   "available_in_worker__service": {
     "de": "Diese Funktion ist nur in <a href=\"/de/docs/Web/API/Service_Worker_API\">Service Workers</a> verfügbar.",
     "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
     "ja": "この機能は<a href=\"/ja/docs/Web/API/Service_Worker_API\">サービスワーカー</a>内でのみ利用可能です。",
     "zh-CN": "此特性仅在 <a href=\"/zh-CN/docs/Web/API/Service_Worker_API\">Service Worker</a> 中可用。"
   },
-
   "example_extensions_heading": {
     "de": "Beispielerweiterungen",
     "en-US": "Example extensions",
     "zh-CN": "示例扩展",
     "zh-TW": "範例擴充套件"
   },
-
   "previous": {
     "de": " Zurück ",
     "en-US": " Previous ",
@@ -296,7 +267,6 @@
     "zh-CN": " 上一页 ",
     "zh-TW": " 前頁 "
   },
-
   "next": {
     "de": " Weiter ",
     "en-US": " Next  ",
@@ -309,7 +279,6 @@
     "zh-CN": " 下一页  ",
     "zh-TW": " 次頁  "
   },
-
   "prev_next_menu": {
     "de": " Übersicht: ",
     "en-US": " Overview: ",
@@ -319,7 +288,6 @@
     "zh-CN": " 概述：",
     "zh-TW": " 概述："
   },
-
   "for_developers": {
     "de": " für Entwickler",
     "en-US": " for developers",
@@ -328,7 +296,6 @@
     "ru": " для разработчиков",
     "zh-CN": " 的开发者说明"
   },
-
   "js_property_attributes_header_prefix": {
     "de": "Eigenschaften von ",
     "en-US": "Property attributes of ",

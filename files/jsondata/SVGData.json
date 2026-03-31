@@ -1,7 +1,9 @@
 {
   "elements": {
     "a": {
-      "categories": ["containerElement"],
+      "categories": [
+        "containerElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -43,13 +45,19 @@
         "'type'",
         "'referrerpolicy'"
       ],
-      "interfaces": ["SVGAElement"]
+      "interfaces": [
+        "SVGAElement"
+      ]
     },
     "animate": {
-      "categories": ["animationElement"],
+      "categories": [
+        "animationElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements"]
+        "elements": [
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -68,13 +76,20 @@
         "'dur'",
         "'repeatCount'"
       ],
-      "interfaces": ["SVGAnimateElement"]
+      "interfaces": [
+        "SVGAnimateElement"
+      ]
     },
     "animateMotion": {
-      "categories": ["animationElement"],
+      "categories": [
+        "animationElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements", "&lt;mpath&gt;"]
+        "elements": [
+          "descriptiveElements",
+          "&lt;mpath&gt;"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -91,13 +106,19 @@
         "'rotate'",
         "'origin'"
       ],
-      "interfaces": ["SVGAnimateMotionElement"]
+      "interfaces": [
+        "SVGAnimateMotionElement"
+      ]
     },
     "animateTransform": {
-      "categories": ["animationElement"],
+      "categories": [
+        "animationElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements"]
+        "elements": [
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -114,13 +135,22 @@
         "'to'",
         "'type'"
       ],
-      "interfaces": ["SVGAnimateTransformElement"]
+      "interfaces": [
+        "SVGAnimateTransformElement"
+      ]
     },
     "circle": {
-      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
+      "categories": [
+        "basicShapeElement",
+        "graphicsElement",
+        "shapeElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["animationElements", "descriptiveElements"]
+        "elements": [
+          "animationElements",
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -135,10 +165,14 @@
         "'cy'",
         "'r'"
       ],
-      "interfaces": ["SVGCircleElement"]
+      "interfaces": [
+        "SVGCircleElement"
+      ]
     },
     "clipPath": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -159,13 +193,19 @@
         "'transform'",
         "'clipPathUnits'"
       ],
-      "interfaces": ["SVGClipPathElement"]
+      "interfaces": [
+        "SVGClipPathElement"
+      ]
     },
     "cursor": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements"]
+        "elements": [
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -176,10 +216,15 @@
         "'y'",
         "'xlink:href'"
       ],
-      "interfaces": ["SVGCursorElement"]
+      "interfaces": [
+        "SVGCursorElement"
+      ]
     },
     "defs": {
-      "categories": ["containerElement", "structuralElement"],
+      "categories": [
+        "containerElement",
+        "structuralElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -216,21 +261,38 @@
         "'externalResourcesRequired'",
         "'transform'"
       ],
-      "interfaces": ["SVGDefsElement"]
+      "interfaces": [
+        "SVGDefsElement"
+      ]
     },
     "desc": {
-      "categories": ["descriptiveElement"],
+      "categories": [
+        "descriptiveElement"
+      ],
       "content": {
         "description": "anyElementsOrCharacterData"
       },
-      "attributes": ["coreAttributes", "'class'", "'style'"],
-      "interfaces": ["SVGDescElement"]
+      "attributes": [
+        "coreAttributes",
+        "'class'",
+        "'style'"
+      ],
+      "interfaces": [
+        "SVGDescElement"
+      ]
     },
     "ellipse": {
-      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
+      "categories": [
+        "basicShapeElement",
+        "graphicsElement",
+        "shapeElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["animationElements", "descriptiveElements"]
+        "elements": [
+          "animationElements",
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -246,13 +308,20 @@
         "'rx'",
         "'ry'"
       ],
-      "interfaces": ["SVGEllipseElement"]
+      "interfaces": [
+        "SVGEllipseElement"
+      ]
     },
     "feBlend": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -264,13 +333,20 @@
         "'in2'",
         "'mode'"
       ],
-      "interfaces": ["SVGFEBlendElement"]
+      "interfaces": [
+        "SVGFEBlendElement"
+      ]
     },
     "feColorMatrix": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -282,10 +358,14 @@
         "'type'",
         "'values'"
       ],
-      "interfaces": ["SVGFEColorMatrixElement"]
+      "interfaces": [
+        "SVGFEColorMatrixElement"
+      ]
     },
     "feComponentTransfer": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -303,13 +383,20 @@
         "'style'",
         "'in'"
       ],
-      "interfaces": ["SVGFEComponentTransferElement"]
+      "interfaces": [
+        "SVGFEComponentTransferElement"
+      ]
     },
     "feComposite": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -325,13 +412,20 @@
         "'k3'",
         "'k4'"
       ],
-      "interfaces": ["SVGFECompositeElement"]
+      "interfaces": [
+        "SVGFECompositeElement"
+      ]
     },
     "feConvolveMatrix": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -350,14 +444,18 @@
         "'kernelUnitLength'",
         "'preserveAlpha'"
       ],
-      "interfaces": ["SVGFEConvolveMatrixElement"]
+      "interfaces": [
+        "SVGFEConvolveMatrixElement"
+      ]
     },
     "feDiffuseLighting": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": {
           "en-US": "Any number of <a href=\"/en-US/docs/Web/SVG/Element#descriptive\">descriptive elements</a> and exactly one <a href=\"/en-US/docs/Web/SVG/Element#lightsource\">light source element</a>, in any order.",
-          "zh-CN": "\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/docs/Web/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u4ee5\u53ca\u4e0d\u591a\u4e0d\u5c11\u4e00\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\uff0c\u987a\u5e8f\u4e0d\u9650\u3002",
+          "zh-CN": "任意数量的<a href=\"/zh-CN/docs/Web/SVG/Element#descriptive\">描述性元素</a>以及不多不少一个<a href=\"/zh-CN/docs/Web/SVG/Element#lightsource\">光源元素</a>，顺序不限。",
           "pt-BR": "Qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Element#descriptive\">elementos descritivos</a> e exatamente um <a href=\"/pt-BR/docs/Web/SVG/Element#lightsource\">elemento de fonte de luz</a>, em qualquer ordem."
         }
       },
@@ -372,13 +470,20 @@
         "'diffuseConstant'",
         "'kernelUnitLength'"
       ],
-      "interfaces": ["SVGFEDiffuseLightingElement"]
+      "interfaces": [
+        "SVGFEDiffuseLightingElement"
+      ]
     },
     "feDisplacementMap": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -392,22 +497,41 @@
         "'xChannelSelector'",
         "'yChannelSelector'"
       ],
-      "interfaces": ["SVGFEDisplacementMapElement"]
+      "interfaces": [
+        "SVGFEDisplacementMapElement"
+      ]
     },
     "feDistantLight": {
-      "categories": ["lightSourceElement"],
+      "categories": [
+        "lightSourceElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
-      "attributes": ["coreAttributes", "'azimuth'", "'elevation'"],
-      "interfaces": ["SVGFEDistantLightElement"]
+      "attributes": [
+        "coreAttributes",
+        "'azimuth'",
+        "'elevation'"
+      ],
+      "interfaces": [
+        "SVGFEDistantLightElement"
+      ]
     },
     "feDropShadow": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;script&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;script&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -420,13 +544,20 @@
         "'dx'",
         "'dy'"
       ],
-      "interfaces": ["SVGFEDropShadowElement"]
+      "interfaces": [
+        "SVGFEDropShadowElement"
+      ]
     },
     "feFlood": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -437,49 +568,96 @@
         "'flood-color'",
         "'flood-opacity'"
       ],
-      "interfaces": ["SVGFEFloodElement"]
+      "interfaces": [
+        "SVGFEFloodElement"
+      ]
     },
     "feFuncA": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
-      "attributes": ["coreAttributes", "transferFunctionAttributes"],
-      "interfaces": ["SVGFEFuncAElement"]
+      "attributes": [
+        "coreAttributes",
+        "transferFunctionAttributes"
+      ],
+      "interfaces": [
+        "SVGFEFuncAElement"
+      ]
     },
     "feFuncB": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
-      "attributes": ["coreAttributes", "transferFunctionAttributes"],
-      "interfaces": ["SVGFEFuncBElement"]
+      "attributes": [
+        "coreAttributes",
+        "transferFunctionAttributes"
+      ],
+      "interfaces": [
+        "SVGFEFuncBElement"
+      ]
     },
     "feFuncG": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
-      "attributes": ["coreAttributes", "transferFunctionAttributes"],
-      "interfaces": ["SVGFEFuncGElement"]
+      "attributes": [
+        "coreAttributes",
+        "transferFunctionAttributes"
+      ],
+      "interfaces": [
+        "SVGFEFuncGElement"
+      ]
     },
     "feFuncR": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
-      "attributes": ["coreAttributes", "transferFunctionAttributes"],
-      "interfaces": ["SVGFEFuncRElement"]
+      "attributes": [
+        "coreAttributes",
+        "transferFunctionAttributes"
+      ],
+      "interfaces": [
+        "SVGFEFuncRElement"
+      ]
     },
     "feGaussianBlur": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -490,10 +668,14 @@
         "'in'",
         "'stdDeviation'"
       ],
-      "interfaces": ["SVGFEGaussianBlurElement"]
+      "interfaces": [
+        "SVGFEGaussianBlurElement"
+      ]
     },
     "feImage": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -513,13 +695,19 @@
         "'preserveAspectRatio'",
         "'xlink:href'"
       ],
-      "interfaces": ["SVGFEImageElement"]
+      "interfaces": [
+        "SVGFEImageElement"
+      ]
     },
     "feMerge": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;feMergeNode&gt;"]
+        "elements": [
+          "&lt;feMergeNode&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -528,22 +716,39 @@
         "'class'",
         "'style'"
       ],
-      "interfaces": ["SVGFEMergeElement"]
+      "interfaces": [
+        "SVGFEMergeElement"
+      ]
     },
     "feMergeNode": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
-      "attributes": ["coreAttributes", "'in'"],
-      "interfaces": ["SVGFEMergeNodeElement"]
+      "attributes": [
+        "coreAttributes",
+        "'in'"
+      ],
+      "interfaces": [
+        "SVGFEMergeNodeElement"
+      ]
     },
     "feMorphology": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -555,13 +760,20 @@
         "'operator'",
         "'radius'"
       ],
-      "interfaces": ["SVGFEMorphologyElement"]
+      "interfaces": [
+        "SVGFEMorphologyElement"
+      ]
     },
     "feOffset": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -573,24 +785,40 @@
         "'dx'",
         "'dy'"
       ],
-      "interfaces": ["SVGFEOffsetElement"]
+      "interfaces": [
+        "SVGFEOffsetElement"
+      ]
     },
     "fePointLight": {
-      "categories": ["lightSourceElement"],
+      "categories": [
+        "lightSourceElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
-      "attributes": ["coreAttributes", "'x'", "'y'", "'z'"],
-      "interfaces": ["SVGFEPointLightElement"]
+      "attributes": [
+        "coreAttributes",
+        "'x'",
+        "'y'",
+        "'z'"
+      ],
+      "interfaces": [
+        "SVGFEPointLightElement"
+      ]
     },
     "feSpecularLighting": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": {
-          "en-US": "Exactly one\u00a0<a href=\"/en-US/docs/Web/SVG/Element#lightsource\">light source element</a>\u00a0first and any number of <a href=\"/en-US/docs/Web/SVG/Element#descriptive\">descriptive elements</a>\u00a0in any order.",
-          "zh-CN": "\u6709\u4e14\u53ea\u6709\u4e00\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\u5728\u5148\uff0c\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/docs/Web/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u987a\u5e8f\u4e0d\u9650\u3002",
-          "pt-BR": "Exatamente um primeiro\u00a0<a href=\"/pt-BR/docs/Web/SVG/Element#lightsource\">elemento de fonte de luz</a>\u00a0e qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Element#descriptive\">elementos descritivos</a>\u00a0em qualquer ordem."
+          "en-US": "Exactly one <a href=\"/en-US/docs/Web/SVG/Element#lightsource\">light source element</a> first and any number of <a href=\"/en-US/docs/Web/SVG/Element#descriptive\">descriptive elements</a> in any order.",
+          "zh-CN": "有且只有一个<a href=\"/zh-CN/docs/Web/SVG/Element#lightsource\">光源元素</a>在先，任意数量的<a href=\"/zh-CN/docs/Web/SVG/Element#descriptive\">描述性元素</a>顺序不限。",
+          "pt-BR": "Exatamente um primeiro <a href=\"/pt-BR/docs/Web/SVG/Element#lightsource\">elemento de fonte de luz</a> e qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Element#descriptive\">elementos descritivos</a> em qualquer ordem."
         }
       },
       "attributes": [
@@ -605,13 +833,20 @@
         "'specularExponent'",
         "'kernelUnitLength'"
       ],
-      "interfaces": ["SVGFESpecularLightingElement"]
+      "interfaces": [
+        "SVGFESpecularLightingElement"
+      ]
     },
     "feSpotLight": {
-      "categories": ["lightSourceElement"],
+      "categories": [
+        "lightSourceElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -624,13 +859,20 @@
         "'specularExponent'",
         "'limitingConeAngle'"
       ],
-      "interfaces": ["SVGFESpotLightElement"]
+      "interfaces": [
+        "SVGFESpotLightElement"
+      ]
     },
     "feTile": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -640,13 +882,20 @@
         "'style'",
         "'in'"
       ],
-      "interfaces": ["SVGFETileElement"]
+      "interfaces": [
+        "SVGFETileElement"
+      ]
     },
     "feTurbulence": {
-      "categories": ["filterPrimitiveElement"],
+      "categories": [
+        "filterPrimitiveElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -660,10 +909,14 @@
         "'stitchTiles'",
         "'type'"
       ],
-      "interfaces": ["SVGFETurbulenceElement"]
+      "interfaces": [
+        "SVGFETurbulenceElement"
+      ]
     },
     "filter": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -688,10 +941,14 @@
         "'primitiveUnits'",
         "'xlink:href'"
       ],
-      "interfaces": ["SVGFilterElement"]
+      "interfaces": [
+        "SVGFilterElement"
+      ]
     },
     "font": {
-      "categories": ["fontElement"],
+      "categories": [
+        "fontElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -716,14 +973,18 @@
         "'vert-origin-y'",
         "'vert-adv-y'"
       ],
-      "interfaces": ["SVGFontElement"]
+      "interfaces": [
+        "SVGFontElement"
+      ]
     },
     "font-face": {
-      "categories": ["fontElement"],
+      "categories": [
+        "fontElement"
+      ],
       "content": {
         "description": {
-          "en-US": "Any number of <a href=\"/en-US/docs/Web/SVG/Element#descriptive\">descriptive elements</a>\u00a0\u00bb and at most one <a href=\"/en-US/docs/Web/SVG/Element/font-face\" title=\"The font-face element corresponds to the CSS @font-face declaration. It defines a font's outer properties.\"><code>&lt;font-face&gt;</code></a> element, in any order.",
-          "pt-BR": "Qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Element#descriptive\">elementos descritivos</a>\u00a0\u00bb e pelo menos um <a href=\"/pt-BR/docs/Web/SVG/Element/font-face\" title=\"O elemento font-face element corresponde à declaração CSS @font-face. Ele define as propriedades externas da fonte.\"><code>&lt;font-face&gt;</code></a>, em qualquer ordem."
+          "en-US": "Any number of <a href=\"/en-US/docs/Web/SVG/Element#descriptive\">descriptive elements</a> » and at most one <a href=\"/en-US/docs/Web/SVG/Element/font-face\" title=\"The font-face element corresponds to the CSS @font-face declaration. It defines a font's outer properties.\"><code>&lt;font-face&gt;</code></a> element, in any order.",
+          "pt-BR": "Qualquer número de <a href=\"/pt-BR/docs/Web/SVG/Element#descriptive\">elementos descritivos</a> » e pelo menos um <a href=\"/pt-BR/docs/Web/SVG/Element/font-face\" title=\"O elemento font-face element corresponde à declaração CSS @font-face. Ele define as propriedades externas da fonte.\"><code>&lt;font-face&gt;</code></a>, em qualquer ordem."
         }
       },
       "attributes": [
@@ -762,48 +1023,85 @@
         "'overline-position'",
         "'overline-thickness'"
       ],
-      "interfaces": ["SVGFontFaceElement"]
+      "interfaces": [
+        "SVGFontFaceElement"
+      ]
     },
     "font-face-format": {
-      "categories": ["fontElement"],
+      "categories": [
+        "fontElement"
+      ],
       "content": {
         "description": "empty"
       },
-      "attributes": ["coreAttributes", "'string'"],
-      "interfaces": ["SVGFontFaceFormatElement"]
+      "attributes": [
+        "coreAttributes",
+        "'string'"
+      ],
+      "interfaces": [
+        "SVGFontFaceFormatElement"
+      ]
     },
     "font-face-name": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "empty"
       },
-      "attributes": ["coreAttributes", "'name'"],
-      "interfaces": ["SVGFontFaceNameElement"]
+      "attributes": [
+        "coreAttributes",
+        "'name'"
+      ],
+      "interfaces": [
+        "SVGFontFaceNameElement"
+      ]
     },
     "font-face-src": {
-      "categories": ["fontElement"],
+      "categories": [
+        "fontElement"
+      ],
       "content": {
         "description": {
           "en-US": "One or more of the following elements, in any order:",
-          "zh-CN": "\u4e00\u4e2a\u6216\u591a\u4e2a\u4e0b\u5217\u5143\u7d20\uff0c\u987a\u5e8f\u4e0d\u9650\uff1a",
+          "zh-CN": "一个或多个下列元素，顺序不限：",
           "pt-BR": "Um ou mais dos seguintes elementos, em qualquer ordem:"
         },
-        "elements": ["&lt;font-face-name&gt;", "&lt;font-face-uri&gt;"]
+        "elements": [
+          "&lt;font-face-name&gt;",
+          "&lt;font-face-uri&gt;"
+        ]
       },
-      "attributes": ["coreAttributes"],
-      "interfaces": ["SVGFontFaceSrcElement"]
+      "attributes": [
+        "coreAttributes"
+      ],
+      "interfaces": [
+        "SVGFontFaceSrcElement"
+      ]
     },
     "font-face-uri": {
-      "categories": ["fontElement"],
+      "categories": [
+        "fontElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;font-face-format&gt;"]
+        "elements": [
+          "&lt;font-face-format&gt;"
+        ]
       },
-      "attributes": ["coreAttributes", "xLinkAttributes", "'xlink:href'"],
-      "interfaces": ["SVGFontFaceUriElement"]
+      "attributes": [
+        "coreAttributes",
+        "xLinkAttributes",
+        "'xlink:href'"
+      ],
+      "interfaces": [
+        "SVGFontFaceUriElement"
+      ]
     },
     "foreignObject": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "anyElementsOrCharacterData"
       },
@@ -821,10 +1119,15 @@
         "'width'",
         "'height'"
       ],
-      "interfaces": ["SVGForeignObjectElement"]
+      "interfaces": [
+        "SVGForeignObjectElement"
+      ]
     },
     "g": {
-      "categories": ["containerElement", "structuralElement"],
+      "categories": [
+        "containerElement",
+        "structuralElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -861,10 +1164,14 @@
         "'externalResourcesRequired'",
         "'transform'"
       ],
-      "interfaces": ["SVGGElement"]
+      "interfaces": [
+        "SVGGElement"
+      ]
     },
     "glyph": {
-      "categories": ["textContentElement"],
+      "categories": [
+        "textContentElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -907,10 +1214,14 @@
         "'arabic-form'",
         "'lang'"
       ],
-      "interfaces": ["SVGGlyphElement"]
+      "interfaces": [
+        "SVGGlyphElement"
+      ]
     },
     "glyphRef": {
-      "categories": ["textContentElement"],
+      "categories": [
+        "textContentElement"
+      ],
       "content": {
         "description": "empty"
       },
@@ -928,21 +1239,40 @@
         "'format'",
         "'xlink:href'"
       ],
-      "interfaces": ["SVGGlyphRefElement"]
+      "interfaces": [
+        "SVGGlyphRefElement"
+      ]
     },
     "hkern": {
-      "categories": ["fontElement"],
+      "categories": [
+        "fontElement"
+      ],
       "content": {
         "description": "empty"
       },
-      "attributes": ["coreAttributes", "'u1'", "'g1'", "'u2'", "'g2'", "'k'"],
-      "interfaces": ["SVGHKernElement"]
+      "attributes": [
+        "coreAttributes",
+        "'u1'",
+        "'g1'",
+        "'u2'",
+        "'g2'",
+        "'k'"
+      ],
+      "interfaces": [
+        "SVGHKernElement"
+      ]
     },
     "image": {
-      "categories": ["graphicsElement", "graphicsReferencingElement"],
+      "categories": [
+        "graphicsElement",
+        "graphicsReferencingElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["animationElements", "descriptiveElements"]
+        "elements": [
+          "animationElements",
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -961,13 +1291,22 @@
         "'xlink:href'",
         "'preserveAspectRatio'"
       ],
-      "interfaces": ["SVGImageElement"]
+      "interfaces": [
+        "SVGImageElement"
+      ]
     },
     "line": {
-      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
+      "categories": [
+        "basicShapeElement",
+        "graphicsElement",
+        "shapeElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["animationElements", "descriptiveElements"]
+        "elements": [
+          "animationElements",
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -983,10 +1322,14 @@
         "'y1'",
         "'y2'"
       ],
-      "interfaces": ["SVGLineElement"]
+      "interfaces": [
+        "SVGLineElement"
+      ]
     },
     "linearGradient": {
-      "categories": ["gradientElement"],
+      "categories": [
+        "gradientElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -1012,10 +1355,14 @@
         "'y2'",
         "'spreadMethod'"
       ],
-      "interfaces": ["SVGLinearGradientElement"]
+      "interfaces": [
+        "SVGLinearGradientElement"
+      ]
     },
     "marker": {
-      "categories": ["containerElement"],
+      "categories": [
+        "containerElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -1058,10 +1405,14 @@
         "'markerHeight'",
         "'orient'"
       ],
-      "interfaces": ["SVGMarkerElement"]
+      "interfaces": [
+        "SVGMarkerElement"
+      ]
     },
     "mask": {
-      "categories": ["containerElement"],
+      "categories": [
+        "containerElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -1102,18 +1453,28 @@
         "'width'",
         "'height'"
       ],
-      "interfaces": ["SVGMaskElement"]
+      "interfaces": [
+        "SVGMaskElement"
+      ]
     },
     "metadata": {
-      "categories": ["descriptiveElement"],
+      "categories": [
+        "descriptiveElement"
+      ],
       "content": {
         "description": "anyElementsOrCharacterData"
       },
-      "attributes": ["coreAttributes"],
-      "interfaces": ["SVGMetadataElement"]
+      "attributes": [
+        "coreAttributes"
+      ],
+      "interfaces": [
+        "SVGMetadataElement"
+      ]
     },
     "missing-glyph": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -1151,13 +1512,19 @@
         "'vert-origin-y'",
         "'vert-adv-y'"
       ],
-      "interfaces": ["SVGMissingGlyphElement"]
+      "interfaces": [
+        "SVGMissingGlyphElement"
+      ]
     },
     "mpath": {
-      "categories": ["animationElement"],
+      "categories": [
+        "animationElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements"]
+        "elements": [
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -1165,13 +1532,21 @@
         "'externalResourcesRequired'",
         "'xlink:href'"
       ],
-      "interfaces": ["SVGMPathElement"]
+      "interfaces": [
+        "SVGMPathElement"
+      ]
     },
     "path": {
-      "categories": ["graphicsElement", "shapeElement"],
+      "categories": [
+        "graphicsElement",
+        "shapeElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["animationElements", "descriptiveElements"]
+        "elements": [
+          "animationElements",
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -1185,10 +1560,14 @@
         "'d'",
         "'pathLength'"
       ],
-      "interfaces": ["SVGPathElement"]
+      "interfaces": [
+        "SVGPathElement"
+      ]
     },
     "pattern": {
-      "categories": ["containerElement"],
+      "categories": [
+        "containerElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -1226,13 +1605,22 @@
         "'patternTransform'",
         "'href'"
       ],
-      "interfaces": ["SVGPatternElement"]
+      "interfaces": [
+        "SVGPatternElement"
+      ]
     },
     "polygon": {
-      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
+      "categories": [
+        "basicShapeElement",
+        "graphicsElement",
+        "shapeElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["animationElements", "descriptiveElements"]
+        "elements": [
+          "animationElements",
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -1245,13 +1633,22 @@
         "'transform'",
         "'points'"
       ],
-      "interfaces": ["SVGPolygonElement"]
+      "interfaces": [
+        "SVGPolygonElement"
+      ]
     },
     "polyline": {
-      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
+      "categories": [
+        "basicShapeElement",
+        "graphicsElement",
+        "shapeElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["animationElements", "descriptiveElements"]
+        "elements": [
+          "animationElements",
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -1264,10 +1661,14 @@
         "'transform'",
         "'points'"
       ],
-      "interfaces": ["SVGPolylineElement"]
+      "interfaces": [
+        "SVGPolylineElement"
+      ]
     },
     "radialGradient": {
-      "categories": ["gradientElement"],
+      "categories": [
+        "gradientElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -1295,13 +1696,22 @@
         "'r'",
         "'spreadMethod'"
       ],
-      "interfaces": ["SVGRadialGradientElement"]
+      "interfaces": [
+        "SVGRadialGradientElement"
+      ]
     },
     "rect": {
-      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
+      "categories": [
+        "basicShapeElement",
+        "graphicsElement",
+        "shapeElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["animationElements", "descriptiveElements"]
+        "elements": [
+          "animationElements",
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -1319,10 +1729,14 @@
         "'rx'",
         "'ry'"
       ],
-      "interfaces": ["SVGRectElement"]
+      "interfaces": [
+        "SVGRectElement"
+      ]
     },
     "script": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "anyElementsOrCharacterData"
       },
@@ -1333,13 +1747,19 @@
         "'type'",
         "'xlink:href'"
       ],
-      "interfaces": ["SVGScriptElement"]
+      "interfaces": [
+        "SVGScriptElement"
+      ]
     },
     "set": {
-      "categories": ["animationElement"],
+      "categories": [
+        "animationElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements"]
+        "elements": [
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -1351,10 +1771,14 @@
         "'externalResourcesRequired'",
         "'to'"
       ],
-      "interfaces": ["SVGSetElement"]
+      "interfaces": [
+        "SVGSetElement"
+      ]
     },
     "stop": {
-      "categories": ["gradientElement"],
+      "categories": [
+        "gradientElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -1371,18 +1795,32 @@
         "'stop-color'",
         "'stop-opacity'"
       ],
-      "interfaces": ["SVGStopElement"]
+      "interfaces": [
+        "SVGStopElement"
+      ]
     },
     "style": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "anyElementsOrCharacterData"
       },
-      "attributes": ["coreAttributes", "'type'", "'media'", "'title'"],
-      "interfaces": ["SVGStyleElement"]
+      "attributes": [
+        "coreAttributes",
+        "'type'",
+        "'media'",
+        "'title'"
+      ],
+      "interfaces": [
+        "SVGStyleElement"
+      ]
     },
     "svg": {
-      "categories": ["containerElement", "structuralElement"],
+      "categories": [
+        "containerElement",
+        "structuralElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -1427,10 +1865,14 @@
         "'preserveAspectRatio'",
         "'viewBox'"
       ],
-      "interfaces": ["SVGSVGElement"]
+      "interfaces": [
+        "SVGSVGElement"
+      ]
     },
     "switch": {
-      "categories": ["containerElement"],
+      "categories": [
+        "containerElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -1458,10 +1900,15 @@
         "'transform'",
         "'allowReorder'"
       ],
-      "interfaces": ["SVGSwitchElement"]
+      "interfaces": [
+        "SVGSwitchElement"
+      ]
     },
     "symbol": {
-      "categories": ["containerElement", "structuralElement"],
+      "categories": [
+        "containerElement",
+        "structuralElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
         "elements": [
@@ -1498,10 +1945,15 @@
         "'preserveAspectRatio'",
         "'viewBox'"
       ],
-      "interfaces": ["SVGSymbolElement"]
+      "interfaces": [
+        "SVGSymbolElement"
+      ]
     },
     "text": {
-      "categories": ["graphicsElement", "textContentElement"],
+      "categories": [
+        "graphicsElement",
+        "textContentElement"
+      ],
       "content": {
         "description": "characterDataElementsInAnyOrder",
         "elements": [
@@ -1529,10 +1981,15 @@
         "'textLength'",
         "'lengthAdjust'"
       ],
-      "interfaces": ["SVGTextElement"]
+      "interfaces": [
+        "SVGTextElement"
+      ]
     },
     "textPath": {
-      "categories": ["textContentElement", "textContentChildElement"],
+      "categories": [
+        "textContentElement",
+        "textContentChildElement"
+      ],
       "content": {
         "description": "characterDataElementsInAnyOrder",
         "elements": [
@@ -1558,21 +2015,38 @@
         "'spacing'",
         "'xlink:href'"
       ],
-      "interfaces": ["SVGTextPathElement"]
+      "interfaces": [
+        "SVGTextPathElement"
+      ]
     },
     "title": {
-      "categories": ["descriptiveElement"],
+      "categories": [
+        "descriptiveElement"
+      ],
       "content": {
         "description": "anyElementsOrCharacterData"
       },
-      "attributes": ["coreAttributes", "'class'", "'style'"],
-      "interfaces": ["SVGTitleElement"]
+      "attributes": [
+        "coreAttributes",
+        "'class'",
+        "'style'"
+      ],
+      "interfaces": [
+        "SVGTitleElement"
+      ]
     },
     "tref": {
-      "categories": ["textContentElement", "textContentChildElement"],
+      "categories": [
+        "textContentElement",
+        "textContentChildElement"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements", "&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "descriptiveElements",
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -1585,10 +2059,15 @@
         "'externalResourcesRequired'",
         "'xlink:href'"
       ],
-      "interfaces": ["SVGTRefElement"]
+      "interfaces": [
+        "SVGTRefElement"
+      ]
     },
     "tspan": {
-      "categories": ["textContentElement", "textContentChildElement"],
+      "categories": [
+        "textContentElement",
+        "textContentChildElement"
+      ],
       "content": {
         "description": "characterDataElementsInAnyOrder",
         "elements": [
@@ -1616,7 +2095,9 @@
         "'textLength'",
         "'lengthAdjust'"
       ],
-      "interfaces": ["SVGTSpanElement"]
+      "interfaces": [
+        "SVGTSpanElement"
+      ]
     },
     "use": {
       "categories": [
@@ -1626,7 +2107,10 @@
       ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["animationElements", "descriptiveElements"]
+        "elements": [
+          "animationElements",
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "conditionalProcessingAttributes",
@@ -1644,13 +2128,19 @@
         "'height'",
         "'xlink:href'"
       ],
-      "interfaces": ["SVGUseElement"]
+      "interfaces": [
+        "SVGUseElement"
+      ]
     },
     "view": {
-      "categories": ["noCategory"],
+      "categories": [
+        "noCategory"
+      ],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements"]
+        "elements": [
+          "descriptiveElements"
+        ]
       },
       "attributes": [
         "coreAttributes",
@@ -1659,15 +2149,28 @@
         "'preserveAspectRatio'",
         "'zoomAndPan'"
       ],
-      "interfaces": ["SVGViewElement"]
+      "interfaces": [
+        "SVGViewElement"
+      ]
     },
     "vkern": {
-      "categories": ["fontElement"],
+      "categories": [
+        "fontElement"
+      ],
       "content": {
         "description": "empty"
       },
-      "attributes": ["coreAttributes", "'u1'", "'g1'", "'u2'", "'g2'", "'k'"],
-      "interfaces": ["SVGVKernElement"]
+      "attributes": [
+        "coreAttributes",
+        "'u1'",
+        "'g1'",
+        "'u2'",
+        "'g2'",
+        "'k'"
+      ],
+      "interfaces": [
+        "SVGVKernElement"
+      ]
     }
   }
 }

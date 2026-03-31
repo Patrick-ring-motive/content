@@ -4,7 +4,11 @@
     "title": "Front matter schema",
     "type": "object",
     "additionalProperties": false,
-    "required": ["title", "slug", "page-type"],
+    "required": [
+      "title",
+      "slug",
+      "page-type"
+    ],
     "properties": {
       "title": {
         "title": "Title",
@@ -35,18 +39,28 @@
         "uniqueItems": true,
         "items": {
           "type": "string",
-          "enum": ["deprecated", "experimental", "non-standard"]
+          "enum": [
+            "deprecated",
+            "experimental",
+            "non-standard"
+          ]
         }
       },
       "browser-compat": {
         "title": "Browser Compatibility",
         "description": "Browser compatibility location",
-        "type": ["array", "string"]
+        "type": [
+          "array",
+          "string"
+        ]
       },
       "spec-urls": {
         "title": "Specification URLs",
         "description": "Specification locations",
-        "type": ["array", "string"],
+        "type": [
+          "array",
+          "string"
+        ],
         "format": "uri",
         "items": {
           "type": "string",
@@ -58,13 +72,19 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Glossary/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Glossary/"
+            }
           }
         },
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["glossary-definition", "glossary-disambiguation"]
+              "enum": [
+                "glossary-definition",
+                "glossary-disambiguation"
+              ]
             }
           }
         },
@@ -73,7 +93,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Learn_web_development/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Learn_web_development/"
+            }
           }
         },
         "then": {
@@ -96,7 +119,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Learn_web_development/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Learn_web_development/"
+            }
           }
         },
         "then": {
@@ -118,7 +144,12 @@
       },
       {
         "if": {
-          "properties": { "slug": { "type": "string", "pattern": "^MDN/" } }
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^MDN/"
+            }
+          }
         },
         "then": {
           "properties": {
@@ -136,13 +167,20 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Mozilla/Firefox" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Mozilla/Firefox"
+            }
           }
         },
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "firefox-release-notes"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "firefox-release-notes"
+              ]
             }
           }
         },
@@ -150,12 +188,22 @@
       },
       {
         "if": {
-          "properties": { "slug": { "type": "string", "pattern": "^Web/SVG/" } }
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/SVG/"
+            }
+          }
         },
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "svg-attribute", "svg-element"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "svg-attribute",
+                "svg-element"
+              ]
             }
           }
         },
@@ -164,7 +212,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/HTML/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTML/"
+            }
           }
         },
         "then": {
@@ -211,7 +262,12 @@
       },
       {
         "if": {
-          "properties": { "slug": { "type": "string", "pattern": "^Web/API/" } }
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/API/"
+            }
+          }
         },
         "then": {
           "properties": {
@@ -237,7 +293,12 @@
       },
       {
         "if": {
-          "properties": { "slug": { "type": "string", "pattern": "^Web/CSS/" } }
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/CSS/"
+            }
+          }
         },
         "then": {
           "properties": {
@@ -267,7 +328,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/JavaScript/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/JavaScript/"
+            }
           }
         },
         "then": {
@@ -300,13 +364,20 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/Manifest/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/Manifest/"
+            }
           }
         },
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "web-manifest-member"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "web-manifest-member"
+              ]
             }
           }
         },
@@ -315,7 +386,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^WebAssembly/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^WebAssembly/"
+            }
           }
         },
         "then": {
@@ -340,7 +414,10 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/WebDriver/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/WebDriver/"
+            }
           }
         },
         "then": {
@@ -368,7 +445,13 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["http-csp-directive"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "http-csp-directive"
+              ]
+            }
+          }
         },
         "else": false
       },
@@ -383,7 +466,11 @@
         },
         "then": {
           "properties": {
-            "page-type": { "enum": ["http-permissions-policy-directive"] }
+            "page-type": {
+              "enum": [
+                "http-permissions-policy-directive"
+              ]
+            }
           }
         },
         "else": false
@@ -398,40 +485,74 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["guide", "http-header"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "http-header"
+              ]
+            }
+          }
         },
         "else": false
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/HTTP/Methods/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTTP/Methods/"
+            }
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["http-method"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "http-method"
+              ]
+            }
+          }
         },
         "else": false
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/HTTP/Status/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTTP/Status/"
+            }
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["http-status-code"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "http-status-code"
+              ]
+            }
+          }
         },
         "else": false
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/MathML/Element/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/MathML/Element/"
+            }
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["mathml-element"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "mathml-element"
+              ]
+            }
+          }
         },
         "else": false
       },
@@ -445,7 +566,13 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["mathml-attribute"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "mathml-attribute"
+              ]
+            }
+          }
         },
         "else": false
       },
@@ -459,7 +586,13 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["aria-attribute"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "aria-attribute"
+              ]
+            }
+          }
         },
         "else": false
       },
@@ -473,25 +606,43 @@
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["aria-role"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "aria-role"
+              ]
+            }
+          }
         },
         "else": false
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/HTTP/CORS/Errors/" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/HTTP/CORS/Errors/"
+            }
           }
         },
         "then": {
-          "properties": { "page-type": { "enum": ["http-cors-error"] } }
+          "properties": {
+            "page-type": {
+              "enum": [
+                "http-cors-error"
+              ]
+            }
+          }
         },
         "else": false
       },
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": ".*" }
+            "slug": {
+              "type": "string",
+              "pattern": ".*"
+            }
           }
         },
         "then": {
@@ -512,13 +663,20 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/XPath" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/XPath"
+            }
           }
         },
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "xpath-function"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "xpath-function"
+              ]
             }
           }
         },
@@ -527,13 +685,20 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/EXSLT" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/EXSLT"
+            }
           }
         },
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "exslt-function"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "exslt-function"
+              ]
             }
           }
         },
@@ -542,13 +707,21 @@
       {
         "if": {
           "properties": {
-            "slug": { "type": "string", "pattern": "^Web/XSLT" }
+            "slug": {
+              "type": "string",
+              "pattern": "^Web/XSLT"
+            }
           }
         },
         "then": {
           "properties": {
             "page-type": {
-              "enum": ["guide", "landing-page", "xslt-element", "xslt-axis"]
+              "enum": [
+                "guide",
+                "landing-page",
+                "xslt-element",
+                "xslt-axis"
+              ]
             }
           }
         },
